@@ -1,0 +1,29 @@
+<svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="35.0369" height="29.5922" rx="1.34348" transform="matrix(-1 0 0 1 65 28.5859)" fill="url(#paint0_linear_8_159)" stroke="white" stroke-width="2"/>
+<path d="M14.883 34.2818C13.3647 34.2818 12.1293 33.0459 12.1293 31.5159C12.1293 29.9859 13.3647 28.75 14.883 28.75C16.4014 28.75 17.6367 29.9859 17.6367 31.5159C17.6367 33.0459 16.4014 34.2818 14.883 34.2818Z" stroke="white" stroke-width="1.5"/>
+<path d="M10.5036 47.1735C8.98527 47.1735 7.74994 45.9377 7.74994 44.4076C7.74994 42.8776 8.98527 41.6417 10.5036 41.6417C12.022 41.6417 13.2573 42.8776 13.2573 44.4076C13.2573 45.9377 12.022 47.1735 10.5036 47.1735Z" stroke="white" stroke-width="1.5"/>
+<line x1="28.4399" y1="44.5717" x2="14.4653" y2="44.5717" stroke="white" stroke-width="1.5" stroke-linecap="square"/>
+<path d="M18.3869 57.5923H22.4745L29.1899 50.707" stroke="white" stroke-width="1.5" stroke-linecap="square"/>
+<path d="M18.3869 31.5159H22.4745L29.1899 38.4012" stroke="white" stroke-width="1.5" stroke-linecap="square"/>
+<line x1="54.5" y1="65.9011" x2="42.0254" y2="65.9011" stroke="white" stroke-width="3" stroke-linecap="round"/>
+<line x1="48" y1="63" x2="48" y2="60" stroke="white" stroke-width="4" stroke-linecap="square"/>
+<path d="M14.883 60.3582C13.3647 60.3582 12.1293 59.1224 12.1293 57.5923C12.1293 56.0623 13.3647 54.8264 14.883 54.8264C16.4014 54.8264 17.6367 56.0623 17.6367 57.5923C17.6367 59.1224 16.4014 60.3582 14.883 60.3582Z" stroke="white" stroke-width="1.5"/>
+<path d="M79.1175 34.2818C80.6358 34.2818 81.8711 33.0459 81.8711 31.5159C81.8711 29.9859 80.6358 28.75 79.1175 28.75C77.5991 28.75 76.3638 29.9859 76.3638 31.5159C76.3638 33.0459 77.5991 34.2818 79.1175 34.2818Z" stroke="white" stroke-width="1.5"/>
+<path d="M83.4969 47.1735C85.0152 47.1735 86.2505 45.9377 86.2505 44.4076C86.2505 42.8776 85.0152 41.6417 83.4969 41.6417C81.9785 41.6417 80.7432 42.8776 80.7432 44.4076C80.7432 45.9377 81.9785 47.1735 83.4969 47.1735Z" stroke="white" stroke-width="1.5"/>
+<line x1="0.75" y1="-0.75" x2="14.7246" y2="-0.75" transform="matrix(1 0 0 -1 64.8105 43.8217)" stroke="white" stroke-width="1.5" stroke-linecap="square"/>
+<path d="M75.6136 57.5923H71.526L64.8105 50.707" stroke="white" stroke-width="1.5" stroke-linecap="square"/>
+<path d="M75.6136 31.5159H71.526L64.8105 38.4012" stroke="white" stroke-width="1.5" stroke-linecap="square"/>
+<path d="M79.1175 60.3582C80.6358 60.3582 81.8711 59.1224 81.8711 57.5923C81.8711 56.0623 80.6358 54.8264 79.1175 54.8264C77.5991 54.8264 76.3638 56.0623 76.3638 57.5923C76.3638 59.1224 77.5991 60.3582 79.1175 60.3582Z" stroke="white" stroke-width="1.5"/>
+<path d="M53.1217 52.8605H41.4508C40.8183 52.8605 40.3055 52.3477 40.3055 51.7151V35.6352C40.3055 35.0027 40.8183 34.4899 41.4508 34.4899H49.5482C49.852 34.4899 50.1433 34.6106 50.3581 34.8253L52.2061 36.6733L53.9316 38.3989C54.1464 38.6137 54.2671 38.905 54.2671 39.2087V51.7151C54.2671 52.3477 53.7543 52.8605 53.1217 52.8605Z" stroke="white" stroke-width="0.979764"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M50.0675 34.3528C49.8959 34.1811 49.6023 34.3027 49.6023 34.5455V39.0037C49.6023 39.1543 49.7243 39.2763 49.8748 39.2763H54.333C54.5758 39.2763 54.6974 38.9827 54.5257 38.811L50.0675 34.3528ZM53.5541 38.2965L50.5821 35.3626V38.2965H53.5541Z" fill="white"/>
+<line x1="44.4696" y1="42.7765" x2="49.8584" y2="42.7765" stroke="white" stroke-width="0.979764" stroke-linecap="round"/>
+<line x1="44.4696" y1="44.9809" x2="49.8584" y2="44.9809" stroke="white" stroke-width="0.979764" stroke-linecap="round"/>
+<line x1="44.4696" y1="46.9405" x2="49.8584" y2="46.9405" stroke="white" stroke-width="0.979764" stroke-linecap="round"/>
+<line x1="44.4696" y1="48.8999" x2="49.8584" y2="48.8999" stroke="white" stroke-width="0.979764" stroke-linecap="round"/>
+<defs>
+<linearGradient id="paint0_linear_8_159" x1="17.5184" y1="0" x2="17.5184" y2="29.5922" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C8C8C8" stop-opacity="0.37"/>
+<stop offset="1" stop-color="#929191" stop-opacity="0.27"/>
+</linearGradient>
+</defs>
+</svg>
