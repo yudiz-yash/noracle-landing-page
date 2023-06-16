@@ -654,7 +654,7 @@ ul.our-team-list li .modal-body { word-break: break-word; font-weight: 300; font
 body.german .main-second .main-title::before {  content: "Über uns";  }
 body.german .main-third .main-title::before {  content: "Anhänger";  }
 body.german .main-fourth .main-title::before {  content: "Dapps";  }
-body.german .main-fifth .main-title::before { content: "Kaufen Sie Nora" }
+body.german .main-fifth .main-title::before { content: "Kaufen Sie NORA" }
 body.german .main-sixth .main-title::before {  content: "Einsätze/Belohnungen"; font-size:130px;  }
 body.german .main-seven .main-title::before {  content: "Zeichen";  }
 body.german .main-eight .main-title::before {  content: "Roadmap";  }
@@ -664,7 +664,7 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 body.french .main-second .main-title::before {  content: "À propos de nous";  }
 body.french .main-third .main-title::before {  content: "Bande-annonce";  }
 body.french .main-fourth .main-title::before {  content: "Dapps";  }
-body.french .main-fifth .main-title::before { content: "Acheter Nora" }
+body.french .main-fifth .main-title::before { content: "Acheter NORA" }
 body.french .main-sixth .main-title::before {  content: "Staking/Rewards";  }
 body.french .main-seven .main-title::before {  content: "Jeton";  }
 body.french .main-eight .main-title::before {  content: "Feuille de route";  }
@@ -684,7 +684,7 @@ body.spanish .main-tenth .content .main-title::before { content: "Para más cons
 body.italian .main-second .main-title::before {  content: "Chi siamo";  }
 body.italian .main-third .main-title::before {  content: "trailer";  }
 body.italian .main-fourth .main-title::before {  content: "Dapps";  }
-body.italian .main-fifth .main-title::before { content: "Acquista Nora" }
+body.italian .main-fifth .main-title::before { content: "Acquista NORA" }
 body.italian .main-sixth .main-title::before {  content: "Picchettamento/ricompense";  }
 body.italian .main-seven .main-title::before {  content: "Gettone";  }
 body.italian .main-eight .main-title::before {  content: "Tabella di marcia";  }
@@ -704,7 +704,7 @@ body.portuguese .main-tenth .content .main-title::before { content: "Para mais i
 body.dutch .main-second .main-title::before {  content: "Over ons";  }
 body.dutch .main-third .main-title::before {  content: "Trailer";  }
 body.dutch .main-fourth .main-title::before {  content: "Dappers";  }
-body.dutch .main-fifth .main-title::before { content: "Koop Nora" }
+body.dutch .main-fifth .main-title::before { content: "Koop NORA" }
 body.dutch .main-sixth .main-title::before {  content: "Staking/Rewards";  }
 body.dutch .main-seven .main-title::before {  content: "Blijken";  }
 body.dutch .main-eight .main-title::before {  content: "Routekaart";  }
@@ -714,7 +714,7 @@ body.dutch .main-tenth .content .main-title::before { content: "Voor meer vragen
 body.turkish .main-second .main-title::before {  content: "Hakkımızda";  }
 body.turkish .main-third .main-title::before {  content: "Römork";  }
 body.turkish .main-fourth .main-title::before {  content: "Dapps";  }
-body.turkish .main-fifth .main-title::before { content: "Nora Satın Al" }
+body.turkish .main-fifth .main-title::before { content: "NORA Satın Al" }
 body.turkish .main-sixth .main-title::before {  content: "Bahis/Ödüller";  }
 body.turkish .main-seven .main-title::before {  content: "Jeton";  }
 body.turkish .main-eight .main-title::before {  content: "Yol haritası";  }
@@ -734,7 +734,7 @@ body.rusian .main-tenth .content .main-title::before { content: "Для полу
 body.romian .main-second .main-title::before {  content: "Despre noi";  }
 body.romian .main-third .main-title::before {  content: "Remorcă";  }
 body.romian .main-fourth .main-title::before {  content: "Dapps";  }
-body.romian .main-fifth .main-title::before { content: "Cumpărați Nora" }
+body.romian .main-fifth .main-title::before { content: "Cumpărați NORA" }
 body.romian .main-sixth .main-title::before {  content: "Staking/Recompense";  }
 body.romian .main-seven .main-title::before {  content: "Jeton";  }
 body.romian .main-eight .main-title::before {  content: "Foaie de parcurs";  }
