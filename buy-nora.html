@@ -47,48 +47,48 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="nav justify-content-center scroller">
-          <li class="nav-item header-navigation position-relative">
-            <a class="nav-link header-navigation-link " href="#mainfirst" data-toggle="collapse"
+          <li class="nav-item header-navigation position-relative redirection-link">
+            <a class="nav-link header-navigation-link " href="#mainfirst"
               data-target=".navbar-collapse.show">Home</a>
             <div class="hover-effect position-absolute w-100 h-100"></div>
           </li>
-          <li class="nav-item header-navigation position-relative">
-            <a class="nav-link header-navigation-link " href="index.html#mainthird" 
+          <li class="nav-item header-navigation position-relative redirection-link">
+            <a class="nav-link header-navigation-link " href="#mainsecond" 
               data-target=".navbar-collapse.show">About</a>
             <div class="hover-effect position-absolute w-100 h-100"></div>
           </li>
-          <li class="nav-item header-navigation position-relative">
-            <a class="nav-link header-navigation-link " href="#mainthird" data-toggle="collapse"
+          <li class="nav-item header-navigation position-relative redirection-link">
+            <a class="nav-link header-navigation-link " href="#mainthird"
               data-target=".navbar-collapse.show">Trailer</a>
             <div class="hover-effect position-absolute w-100 h-100"></div>
           </li>
-          <li class="nav-item header-navigation position-relative">
-            <a class="nav-link header-navigation-link " href="#mainfourth" data-toggle="collapse"
+          <li class="nav-item header-navigation position-relative redirection-link">
+            <a class="nav-link header-navigation-link " href="#mainfourth"
               data-target=".navbar-collapse.show">Dapps</a>
             <div class="hover-effect position-absolute w-100 h-100"></div>
           </li>
           <li class="nav-item header-navigation position-relative active">
-            <a class="nav-link header-navigation-link  " href="#mainfifth" data-toggle="collapse"
+            <a class="nav-link header-navigation-link  " href="JavaScript:void(0)"
               data-target=".navbar-collapse.show ">Buy $NORA</a>
             <div class="hover-effect position-absolute w-100 h-100"></div>
           </li>
-          <li class="nav-item header-navigation position-relative">
-            <a class="nav-link header-navigation-link " href="#mainsixth" data-toggle="collapse"
+          <li class="nav-item header-navigation position-relative redirection-link">
+            <a class="nav-link header-navigation-link " href="#mainsixth"
               data-target=".navbar-collapse.show">Staking/Rewards</a>
             <div class="hover-effect position-absolute w-100 h-100"></div>
           </li>
-          <li class="nav-item header-navigation position-relative">
-            <a class="nav-link header-navigation-link " href="#mainseven" data-toggle="collapse"
+          <li class="nav-item header-navigation position-relative redirection-link">
+            <a class="nav-link header-navigation-link " href="#mainseven"
               data-target=".navbar-collapse.show">Tokenomics</a>
             <div class="hover-effect position-absolute w-100 h-100"></div>
           </li>
-          <li class="nav-item header-navigation position-relative">
-            <a class="nav-link header-navigation-link " href="#maineight" data-toggle="collapse"
+          <li class="nav-item header-navigation position-relative redirection-link">
+            <a class="nav-link header-navigation-link " href="#maineight"
               data-target=".navbar-collapse.show">Roadmap</a>
             <div class="hover-effect position-absolute w-100 h-100"></div>
           </li>
-          <li class="nav-item header-navigation position-relative">
-            <a class="nav-link header-navigation-link " href="#mainnine" data-toggle="collapse"
+          <li class="nav-item header-navigation position-relative redirection-link">
+            <a class="nav-link header-navigation-link " href="#mainnine"
               data-target=".navbar-collapse.show">Team</a>
             <div class="hover-effect position-absolute w-100 h-100"></div>
           </li>
@@ -140,7 +140,7 @@
 
   <!-- Main Start -->
 
-  <section class="main-fifth overflow-hidden scroll-section buy-nora-sec" id="mainfifth">
+  <section class="main-fifth overflow-hidden scroll-section buy-nora-sec">
     <div class="container">
         <div class="row">
           <div class="col-md-7">
@@ -194,7 +194,57 @@
                   <div class="snora-header">
                     <img src="images/logo.svg"><span>Buy SNORA</span>
                   </div>
-
+                  <div class="snora-tabs">
+                    <ul class="nav nav-pills">
+                      <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#home"><img src="images/usdt-icon.svg" /> <span>USDT</span> </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#menu1"><span>MATIC</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#menu2"> <span>ETH</span> </a>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div class="tab-pane container active" id="home">
+                        <div class="form-grp">
+                          <label>Amount you paid in USDT</label>
+                          <input type="text" name="usdt-value" />
+                        </div>
+                        <div class="form-grp">
+                          <label>Number of SNORA You Recived</label>
+                          <input type="text" name="usdt-value" />
+                        </div>
+                      </div>
+                      <div class="tab-pane container fade" id="menu1">
+                        <div class="form-grp">
+                          <label>Amount you paid in MATIC</label>
+                          <input type="text" name="usdt-value" />
+                        </div>
+                        <div class="form-grp">
+                          <label>Number of SNORA You Recived</label>
+                          <input type="text" name="usdt-value" />
+                        </div>
+                      </div>
+                      <div class="tab-pane container fade" id="menu2">
+                        <div class="form-grp">
+                          <label>Amount you paid in ETH</label>
+                          <input type="text" name="usdt-value" />
+                        </div>
+                        <div class="form-grp">
+                          <label>Number of SNORA You Recived</label>
+                          <input type="text" name="usdt-value" />
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button">Connect Wallet</button>
+                    <ul>
+                      <li>Chosse the currency you want to buy in</li>
+                      <li>Enter your desired amount</li>
+                      <li>Connect you r wallet,confirm the transaction and check your SNORA Balance</li>
+                    </ul>
+                  </div>
                 </div>
             </div>
           </div>
@@ -242,25 +292,33 @@
 
   <!-- Footer End -->
   <script>
+    $(".scroller .redirection-link a[href^='#']").click(function (e) {
 
-    $(".scroller a[href^='#']").click(function (e) {
       e.preventDefault();
 
-      if (window.innerWidth < 1200) {
-        var position = $($(this).attr("href")).offset().top - 620;
-        // var position = $($(this).attr("href")).offset().top - 590;
-      }
-      else {
-        var position = $($(this).attr("href")).offset().top - 15;
-        // var position = $($(this).attr("href")).offset().top + 1;
-      }
-      // $("body, html").animate({
-      //   scrollTop: position
-      // } /* speed */ );
-      gsap.to(window, { duration: 0.05, scrollTo: position });
+      sessionStorage.setItem('tagName', $(this).attr("href"))
 
+      window.location.href = "index.html"
 
     });
+    // $(".scroller a[href^='#']").click(function (e) {
+    //   e.preventDefault();
+
+    //   if (window.innerWidth < 1200) {
+    //     var position = $($(this).attr("href")).offset().top - 620;
+    //     // var position = $($(this).attr("href")).offset().top - 590;
+    //   }
+    //   else {
+    //     var position = $($(this).attr("href")).offset().top - 15;
+    //     // var position = $($(this).attr("href")).offset().top + 1;
+    //   }
+    //   // $("body, html").animate({
+    //   //   scrollTop: position
+    //   // } /* speed */ );
+    //   gsap.to(window, { duration: 0.05, scrollTo: position });
+
+
+    // });
 
     $(".video a[href^='#']").click(function (e) {
       e.preventDefault();

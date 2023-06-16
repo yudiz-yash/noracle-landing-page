@@ -92,8 +92,8 @@
             <div class="hover-effect position-absolute w-100 h-100"></div>
           </li>
           <li class="nav-item header-navigation position-relative">
-            <a class="nav-link header-navigation-link " href="#mainfifth" data-toggle="collapse"
-              data-target=".navbar-collapse.show">Buy $NORA</a>
+            <a class="nav-link header-navigation-link " href="javascript:void(0)" data-target=".navbar-collapse.show">Buy
+              $NORA</a>
             <div class="hover-effect position-absolute w-100 h-100"></div>
           </li>
           <li class="nav-item header-navigation position-relative">
@@ -374,7 +374,7 @@
   </section>
 
   <section class="main-fifth overflow-hidden scroll-section" id="mainfifth">
-    <div class="gradient-circle gradient-circle-7"></div>
+    <!-- <div class="gradient-circle gradient-circle-7"></div>
     <div class="gradient-circle gradient-circle-8"></div>
     <div class="container">
       <div class="main-title">
@@ -490,7 +490,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
 
   <section class="main-sixth overflow-hidden px-0 scroll-section" id="mainsixth">
@@ -1036,6 +1036,26 @@
   <!-- Footer End -->
   <script>
 
+    $(document).ready(function (e) {
+
+      let _id = sessionStorage.getItem('tagName');
+
+      if (_id !== null) {
+
+        if (window.innerWidth < 1200) {
+          var position = $(`${_id}`).offset().top - 80;
+        }
+        else {
+          var position = $(`${_id}`).offset().top + 17;
+        }
+
+        gsap.to(window, { duration: 0.05, scrollTo: position });
+      }
+
+      sessionStorage.removeItem('tagName')
+
+    });
+    
     $(".scroller a[href^='#']").click(function (e) {
       e.preventDefault();
 
