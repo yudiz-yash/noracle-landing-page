@@ -32,19 +32,43 @@
   <script type="text/javascript" src="js/main.js"></script>
 </head>
 
-<body>
+<body class="polish">
   <!-- Header Start -->
   <a class="close-navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></a>
-  <header class="top-header overflow-hidden position-sticky">
+  <header class="top-header position-sticky">
     <nav class="navbar navbar-expand-xl py-0">
       <a class="navbar-brand" href="#"><img src="./images/NavbarLogo.svg" /></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <div class="d-inline-flex align-items-center">
+        <div class="d-mobile">
+        <a class="nav-link header-navigation-link dropdown-toggle btn btn-connectWallet lang-dropdown" id="navbarDropdown" href="" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PL</a>
+          <!-- <div class="hover-effect position-absolute w-100 h-100"></div> -->
+          <div class="dropdown-menu country-dropdown" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="index.html"><img src="images/flags/english.png" /><span>English</span></a>
+            <a class="dropdown-item"  href="index-german.html" /><img src="images/flags/german.png" /><span>German</span></a>
+            <a class="dropdown-item"  href="index-french.html" /><img src="images/flags/french.png" /><span>French</span></a>
+            <a class="dropdown-item"  href="index-spanish.html" /><img src="images/flags/spanish.png" /><span>Spanish</span></a>
+            <a class="dropdown-item"  href="index-italian.html" /><img src="images/flags/italian.png" /><span>Italian</span></a>
+            <a class="dropdown-item"  href="index-portuguese.html" /><img src="images/flags/portuguese.png" /><span>Portuguese</span></a>
+            <a class="dropdown-item"  href="index-dutch.html" /><img src="images/flags/dutch.png" /><span>Dutch</span></a>
+            <a class="dropdown-item"  href="index-turkish.html" /><img src="images/flags/turkish.png" /><span>Turkish</span></a>
+            <a class="dropdown-item"  href="index-russian.html" /><img src="images/flags/russian.png" /><span>Russian</span></a>
+            <a class="dropdown-item"  href="index-romanian.html" /><img src="images/flags/romanian.png" /><span>Romanian</span></a>
+            <a class="dropdown-item"  href="index-chinese.html" /><img src="images/flags/chinese.png" /><span>Chinese</span></a>
+            <a class="dropdown-item"  href="index-korean.html" /><img src="images/flags/korean.png" /><span>Korean</span></a>
+            <a class="dropdown-item active"  href="index-polish.html" /><img src="images/flags/polish.png" /><span>Polish</span></a>
+            <a class="dropdown-item"  href="index-japanese.html" /><img src="images/flags/japanese.png" /><span>Japanese</span></a>
+          </div>
+      </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         <span class="navbar-toggler-icon"></span>
         <span class="navbar-toggler-icon"></span>
       </button>
+      
+      </div>
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="nav justify-content-center scroller">
           <li class="nav-item header-navigation position-relative active">
@@ -97,9 +121,9 @@
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dokumentacja</a>
             <!-- <div class="hover-effect position-absolute w-100 h-100"></div> -->
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1qtgs5CjPZuE5J8NsEs4E7WE6apXZkEd3/view">Jeden pager</a>
+              <a class="dropdown-item" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1qtgs5CjPZuE5J8NsEs4E7WE6apXZkEd3/view">One-Pager</a>
               <a class="dropdown-item" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1NJpj8E49TpadizJNcz07T3ssqELRxpO1/view">Litepaper</a>
-              <a class="dropdown-item" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1uFVgxQQz5pfPowMUPBHLM7Q6NGkcks-p/view">Biały papier</a>
+              <a class="dropdown-item" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1uFVgxQQz5pfPowMUPBHLM7Q6NGkcks-p/view">Whitepaper</a>
               <a class="dropdown-item" target="_blank" rel="noreferrer"
                 href="https://patentimages.storage.googleapis.com/2e/b4/9f/17560f0c1d173a/US8727859.pdf">Aktywny patent</a>
             </div>
@@ -111,9 +135,9 @@
             Połącz portfel
           </button>
           </li>
-        <li class="nav-item header-navigation position-relative">
+        <li class="nav-item header-navigation position-relative d-desktop">
             <a class="nav-link header-navigation-link dropdown-toggle btn btn-connectWallet lang-dropdown" id="navbarDropdown" href="" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/world.png" /></a>
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PL</a>
             <!-- <div class="hover-effect position-absolute w-100 h-100"></div> -->
             <div class="dropdown-menu country-dropdown" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="index.html"><img src="images/flags/english.png" /><span>English</span></a>
@@ -128,7 +152,7 @@
               <a class="dropdown-item"  href="index-romanian.html" /><img src="images/flags/romanian.png" /><span>Romanian</span></a>
               <a class="dropdown-item"  href="index-chinese.html" /><img src="images/flags/chinese.png" /><span>Chinese</span></a>
               <a class="dropdown-item"  href="index-korean.html" /><img src="images/flags/korean.png" /><span>Korean</span></a>
-              <a class="dropdown-item"  href="index-polish.html" /><img src="images/flags/polish.png" /><span>Polish</span></a>
+              <a class="dropdown-item active"  href="index-polish.html" /><img src="images/flags/polish.png" /><span>Polish</span></a>
               <a class="dropdown-item"  href="index-japanese.html" /><img src="images/flags/japanese.png" /><span>Japanese</span></a>
             </div>
           </li>

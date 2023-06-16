@@ -92,6 +92,8 @@ textarea { resize: none; }
 body { background: #000000; /* background: #514747; */ }
 
 .p-relative     { position:relative;  }
+.d-mobile             { display:none; position:relative; }
+  .d-desktop            { display:block; position:relative;  }
 
 .overflow-hidden { overflow-x: clip !important; }
 .gradient-circle { background: #47b8ff; opacity: 0.25; filter: blur(200px); width: 652px; height: 652px; position: absolute; }
@@ -192,13 +194,19 @@ body.menu-open .navbar-toggler span:last-child { -webkit-transform: rotate(45deg
 
 .top-header .header-navigation:hover .hover-effect { z-index: 10; border-bottom: 2px solid #49b9ff; background: linear-gradient(180deg, rgba(63, 93, 255, 0.162) -2.55%, rgba(73, 185, 255, 0.075) 102.04%); }
 
-.top-header .header-navigation .dropdown-menu { background: white; transform: translateX(-50%); left: 50%; }
+.top-header .header-navigation .dropdown-menu { background: white; transform: none; left: unset; right:0; top:91% }
+.top-header .header-navigation .dropdown-menu:hover { display:block; }
 
 .top-header .header-navigation .dropdown-menu .dropdown-item { font-size: 16px; line-height: 32px; color: black; }
+.top-header .header-navigation .dropdown-menu .dropdown-item.active,
+.top-header .header-navigation .dropdown-menu .dropdown-item.active:hover,
+.top-header .header-navigation .dropdown-menu .dropdown-item.active:focus { background:#4980ff; color:#fff !important }
 
 .top-header .header-navigation .dropdown-menu .dropdown-item:hover { background: unset; color: #3f5dff; }
 
 .top-header .header-navigation .header-navigation-link { font-size: 16px; line-height: 60px; color: #b3b2b2; transition: 0.3s ease-in-out; z-index: 100; position: relative; padding: 0; margin: 5px 15px; font-weight: 400; font-family: "Inter-400"; }
+
+.top-header .header-navigation .header-navigation-link:hover + .dropdown-menu { display:block;  }
 
 .top-header .header-navigation.active .header-navigation-link { color: white; }
 
@@ -220,7 +228,7 @@ body.menu-open .navbar-toggler span:last-child { -webkit-transform: rotate(45deg
 
 .main-first .information .title-third { color: #b3b2b2; line-height: 26px; font-size: 15px; font-weight: 400; font-family: "Inter-400"; }
 
-.main-first .information-link { padding: 15px 0; gap: 20px; display: inline-flex !important; }
+.main-first .information-link { padding: 15px 0; gap: 20px; display: inline-flex !important; flex-wrap:wrap; justify-content:center }
 
 .main-first .information-link .btn-information-link-first { font-size: 20px; line-height: 28px; font-weight: 600; font-family: 'Inter-600'; padding: 10px 25px; }
 
@@ -246,7 +254,7 @@ body.menu-open .navbar-toggler span:last-child { -webkit-transform: rotate(45deg
 
 .main-second .main-title::before { -webkit-transform-origin-x: left; -moz-transform-origin: left; content: "About Us"; left: 0; top: 6.9rem; }
 
-.main-second .box { background: linear-gradient(180deg, rgba(224, 224, 224, 0.09) 0%, rgba(181, 181, 181, 0.03) 100%); border-radius: 180px; padding: 25px; min-height: 390px; max-width: 300px; margin: 15px auto; position: relative; gap: 10px; transition: 0.3s ease-out; }
+.main-second .box { background: linear-gradient(180deg, rgba(224, 224, 224, 0.09) 0%, rgba(181, 181, 181, 0.03) 100%); border-radius: 180px; padding: 25px 41px; min-height: 390px; max-width: 300px; margin: 15px auto; position: relative; gap: 10px; transition: 0.3s ease-out; height:100% }
 
 .main-second .box::before { content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; border-radius: 180px; border: 3px solid transparent; transition: 0.3s ease-in-out; }
 
@@ -355,14 +363,14 @@ body.menu-open .navbar-toggler span:last-child { -webkit-transform: rotate(45deg
 
 .main-fifth .group .sub-group .group-title { font-size: 20px; line-height: 36px; color: #ffffff; font-weight: 500; font-family: "Inter-500"; }
 
-.main-fifth .social-media { margin: 60px auto; width: 100%; height: auto; display: flex; justify-content: center; gap: 30px; position: relative; }
+.main-fifth .social-media { margin: 60px auto; width: 100%; height: auto; display: flex; justify-content: center; gap: 30px; position: relative; padding:0px 20px; max-width:70%; align-items:center; }
 
 .main-fifth .social-media::before,
 .main-fifth .social-media::after { content: ""; position: absolute; width: 15%; height: 3px; border-radius: 5px; transform: translateY(-50%); height: 3px; top: 50%; }
 
-.main-fifth .social-media::before { left: 0; background: linear-gradient(223deg, rgba(251, 168, 2, 1) 0%, rgba(0, 0, 0, 0) 100%); }
+.main-fifth .social-media::before { right: 100%; background: linear-gradient(223deg, rgba(251, 168, 2, 1) 0%, rgba(0, 0, 0, 0) 100%); }
 
-.main-fifth .social-media::after { right: 0; background: linear-gradient(43deg, rgba(251, 168, 2, 1) 0%, rgba(0, 0, 0, 0) 100%); }
+.main-fifth .social-media::after { left: 100%; background: linear-gradient(43deg, rgba(251, 168, 2, 1) 0%, rgba(0, 0, 0, 0) 100%); }
 
 .main-fifth .social-media .data { font-size: 20px; line-height: 35px; color: white; text-align: center; }
 
@@ -444,7 +452,8 @@ body.menu-open .navbar-toggler span:last-child { -webkit-transform: rotate(45deg
 
 .main-seven .box .tokenomicsChart-text { font-size: 15px; line-height: 30px; font-weight: 500; font-family: "Inter-500"; color: white; width: 100%; display: flex; justify-content: space-evenly; margin: 20px auto; }
 
-.main-seven .box .tokenomicsChart-text .line { border-left: 1px solid rgba(77, 76, 76, 1); }
+
+.main-seven .box .tokenomicsChart-text .line { border-left: 1px solid rgba(77, 76, 76, 1); margin:0px 10px }
 
 .main-eight { padding: 7rem 5px 2rem 5px }
 
@@ -583,7 +592,7 @@ ul.our-team-list li .modal-body { word-break: break-word; font-weight: 300; font
 .box-container li.data-list:nth-child(6n + 1):first-child>div::before, .box-container li.data-list:nth-child(6n + 6):last-child>div::before,
 .box-container li.data-list:nth-child(6n + 3):last-child>div::before { top: 0px; height: 100%; }
 
-.box-container li.data-list>div>div>div { padding: 20px; backdrop-filter: blur(4.5px); -webkit-backdrop-filter: blur(4.5px); font-size: 16px; background: linear-gradient(360deg, rgba(224, 224, 224, 0.09) 6.51%, rgba(181, 181, 181, 0.03) 99.86%); line-height: 22px; color: #fff; font-weight: 600; min-height: 270px; position: relative; border-radius: 15px; }
+.box-container li.data-list>div>div>div { padding: 15px 20px; backdrop-filter: blur(4.5px); -webkit-backdrop-filter: blur(4.5px); font-size: 16px; background: linear-gradient(360deg, rgba(224, 224, 224, 0.09) 6.51%, rgba(181, 181, 181, 0.03) 99.86%); line-height: 22px; color: #fff; font-weight: 600; min-height: 270px; position: relative; border-radius: 15px; }
 
 .box-container li.data-list>div>div>div::before { position: absolute; width: 100%; height: 100%; content: ""; top: 0; left: 0; border-radius: 15px; border: 3px solid transparent; transition: 0.3s ease-in-out; }
 
@@ -622,7 +631,7 @@ ul.our-team-list li .modal-body { word-break: break-word; font-weight: 300; font
 
 .box-container .data-list ul { padding: 15px 0; }
 
-.box-container .data-list ul li { color: #dedede; font-family: "Inter-400"; font-weight: 400; font-size: 16px; position: relative; padding-left: 16px; line-height: 20px; padding-bottom: 7px; }
+.box-container .data-list ul li { color: #dedede; font-family: "Inter-400"; font-weight: 400; font-size: 14px; position: relative; padding-left: 16px; line-height: 20px; padding-bottom: 4px; }
 
 .box-container .data-list ul li::before { content: "\f111"; font-family: "FontAwesome"; font-size: 8px; position: absolute; top: 0; left: 0; }
 
@@ -641,15 +650,147 @@ ul.our-team-list li .modal-body { word-break: break-word; font-weight: 300; font
 .lang-dropdown img { max-width:20px; filter:brightness(0) invert(100%);  }
 .lang-dropdown:focus,
 .lang-dropdown:active { background:radial-gradient(64.38% 64.38% at 35.13% 21.75%, #49b9ff 0%, #3f5dff 100%) !important;  }
+
 body.german .main-second .main-title::before {  content: "Über uns";  }
 body.german .main-third .main-title::before {  content: "Anhänger";  }
 body.german .main-fourth .main-title::before {  content: "Dapps";  }
-body.german .main-sixth .main-title::before {  content: "Einsätze/Belohnungen";  }
+body.german .main-fifth .main-title::before { content: "Kaufen Sie Nora" }
+body.german .main-sixth .main-title::before {  content: "Einsätze/Belohnungen"; font-size:130px;  }
 body.german .main-seven .main-title::before {  content: "Zeichen";  }
 body.german .main-eight .main-title::before {  content: "Roadmap";  }
 body.german .our-team-sec .main-title::before {  content: "Das Team";  }
 body.german .main-tenth .content .main-title::before { content: "Für weitere Anfragen" }
 
+body.french .main-second .main-title::before {  content: "À propos de nous";  }
+body.french .main-third .main-title::before {  content: "Bande-annonce";  }
+body.french .main-fourth .main-title::before {  content: "Dapps";  }
+body.french .main-fifth .main-title::before { content: "Acheter Nora" }
+body.french .main-sixth .main-title::before {  content: "Jalonner / récompenses";  }
+body.french .main-seven .main-title::before {  content: "Jeton";  }
+body.french .main-eight .main-title::before {  content: "Feuille de route";  }
+body.french .our-team-sec .main-title::before {  content: "Rencontrer l'équipe";  }
+body.french .main-tenth .content .main-title::before { content: "Pour plus d'enquête" }
+
+body.spanish .main-second .main-title::before {  content: "Sobre nosotros";  }
+body.spanish .main-third .main-title::before {  content: "Remolque";  }
+body.spanish .main-fourth .main-title::before {  content: "Dapps";  }
+body.spanish .main-fifth .main-title::before { content: "Comprar nora" }
+body.spanish .main-sixth .main-title::before {  content: "Apuestas/recompensas";  }
+body.spanish .main-seven .main-title::before {  content: "Simbólico";  }
+body.spanish .main-eight .main-title::before {  content: "Mapa vial";  }
+body.spanish .our-team-sec .main-title::before {  content: "Conocer al equipo";  }
+body.spanish .main-tenth .content .main-title::before { content: "Para más consulta" }
+
+body.italian .main-second .main-title::before {  content: "Chi siamo";  }
+body.italian .main-third .main-title::before {  content: "trailer";  }
+body.italian .main-fourth .main-title::before {  content: "Dapps";  }
+body.italian .main-fifth .main-title::before { content: "Acquista Nora" }
+body.italian .main-sixth .main-title::before {  content: "Picchettamento/ricompense";  }
+body.italian .main-seven .main-title::before {  content: "Gettone";  }
+body.italian .main-eight .main-title::before {  content: "Tabella di marcia";  }
+body.italian .our-team-sec .main-title::before {  content: "Incontrare la squadra";  }
+body.italian .main-tenth .content .main-title::before { content: "Per ulteriori indagini" }
+
+body.portuguese .main-second .main-title::before {  content: "Sobre nós";  }
+body.portuguese .main-third .main-title::before {  content: "Reboque";  }
+body.portuguese .main-fourth .main-title::before {  content: "Dapps";  }
+body.portuguese .main-fifth .main-title::before { content: "Comprar nora" }
+body.portuguese .main-sixth .main-title::before {  content: "Aitura/recompensa";  }
+body.portuguese .main-seven .main-title::before {  content: "Símbolo";  }
+body.portuguese .main-eight .main-title::before {  content: "Roteiro";  }
+body.portuguese .our-team-sec .main-title::before {  content: "Conheça o time";  }
+body.portuguese .main-tenth .content .main-title::before { content: "Para mais investigação" }
+
+body.dutch .main-second .main-title::before {  content: "Over ons";  }
+body.dutch .main-third .main-title::before {  content: "Trailer";  }
+body.dutch .main-fourth .main-title::before {  content: "Dappers";  }
+body.dutch .main-fifth .main-title::before { content: "Koop Nora" }
+body.dutch .main-sixth .main-title::before {  content: "Staking/Rewards";  }
+body.dutch .main-seven .main-title::before {  content: "Blijken";  }
+body.dutch .main-eight .main-title::before {  content: "Routekaart";  }
+body.dutch .our-team-sec .main-title::before {  content: "Ontmoet het team";  }
+body.dutch .main-tenth .content .main-title::before { content: "Voor meer vragen" }
+
+body.turkish .main-second .main-title::before {  content: "Hakkımızda";  }
+body.turkish .main-third .main-title::before {  content: "Römork";  }
+body.turkish .main-fourth .main-title::before {  content: "Dapps";  }
+body.turkish .main-fifth .main-title::before { content: "Nora Satın Al" }
+body.turkish .main-sixth .main-title::before {  content: "Bahis/Ödüller";  }
+body.turkish .main-seven .main-title::before {  content: "Jeton";  }
+body.turkish .main-eight .main-title::before {  content: "Yol haritası";  }
+body.turkish .our-team-sec .main-title::before {  content: "Ekiple tanış";  }
+body.turkish .main-tenth .content .main-title::before { content: "Daha fazla bilgi için" }
+
+body.rusian .main-second .main-title::before {  content: "О нас";  }
+body.rusian .main-third .main-title::before {  content: "Трейлер";  }
+body.rusian .main-fourth .main-title::before {  content: "Дапс";  }
+body.rusian .main-fifth .main-title::before { content: "Купить нору" }
+body.rusian .main-sixth .main-title::before {  content: "Переплеска/награды";  }
+body.rusian .main-seven .main-title::before {  content: "Токен";  }
+body.rusian .main-eight .main-title::before {  content: "Дорожная карта";  }
+body.rusian .our-team-sec .main-title::before {  content: "Встретить команду";  }
+body.rusian .main-tenth .content .main-title::before { content: "Для получения дополнительной информации" }
+
+body.romian .main-second .main-title::before {  content: "Despre noi";  }
+body.romian .main-third .main-title::before {  content: "Remorcă";  }
+body.romian .main-fourth .main-title::before {  content: "Dapps";  }
+body.romian .main-fifth .main-title::before { content: "Cumpărați Nora" }
+body.romian .main-sixth .main-title::before {  content: "Staking/Recompense";  }
+body.romian .main-seven .main-title::before {  content: "Jeton";  }
+body.romian .main-eight .main-title::before {  content: "Foaie de parcurs";  }
+body.romian .our-team-sec .main-title::before {  content: "Fa cunostinta cu echipa";  }
+body.romian .main-tenth .content .main-title::before { content: "Pentru mai multe anchete" }
+
+body.chinese .main-second .main-title::before {  content: "关于我们";  }
+body.chinese .main-third .main-title::before {  content: "预告片";  }
+body.chinese .main-fourth .main-title::before {  content: "Dapps";  }
+body.chinese .main-fifth .main-title::before { content: "买诺拉" }
+body.chinese .main-sixth .main-title::before {  content: "积分/奖励";  }
+body.chinese .main-seven .main-title::before {  content: "令牌";  }
+body.chinese .main-eight .main-title::before {  content: "路线图";  }
+body.chinese .our-team-sec .main-title::before {  content: "认识团队";  }
+body.chinese .main-tenth .content .main-title::before { content: "要进行更多查询" }
+
+body.korean .main-second .main-title::before {  content: "우리에 대해";  }
+body.korean .main-third .main-title::before {  content: "트레일러";  }
+body.korean .main-fourth .main-title::before {  content: "Dapps";  }
+body.korean .main-fifth .main-title::before { content: "노라를 사십시오" }
+body.korean .main-sixth .main-title::before {  content: "스테이 킹/보상";  }
+body.korean .main-seven .main-title::before {  content: "토큰";  }
+body.korean .main-eight .main-title::before {  content: "로드맵";  }
+body.korean .our-team-sec .main-title::before {  content: "팀을 만나십시오";  }
+body.korean .main-tenth .content .main-title::before { content: "더 많은 문의" }
+
+body.polish .main-second .main-title::before {  content: "O nas";  }
+body.polish .main-third .main-title::before {  content: "Przyczepa";  }
+body.polish .main-fourth .main-title::before {  content: "Dapps";  }
+body.polish .main-fifth .main-title::before { content: "Kup Norę" }
+body.polish .main-sixth .main-title::before {  content: "Staking/nagrody";  }
+body.polish .main-seven .main-title::before {  content: "Znak";  }
+body.polish .main-eight .main-title::before {  content: "Mapa drogowa";  }
+body.polish .our-team-sec .main-title::before {  content: "Poznaj drużynę";  }
+body.polish .main-tenth .content .main-title::before { content: "Aby uzyskać więcej zapytania" }
+
+body.japanese .main-second .main-title::before {  content: "私たちに関しては";  }
+body.japanese .main-third .main-title::before {  content: "トレーラー";  }
+body.japanese .main-fourth .main-title::before {  content: "ダップ";  }
+body.japanese .main-fifth .main-title::before { content: "ノラを買う" }
+body.japanese .main-sixth .main-title::before {  content: "ステーキング/報酬";  }
+body.japanese .main-seven .main-title::before {  content: "トークン";  }
+body.japanese .main-eight .main-title::before {  content: "ロードマップ";  }
+body.japanese .our-team-sec .main-title::before {  content: "チームに会います";  }
+body.japanese .main-tenth .content .main-title::before { content: "詳細については" }
+
+
+.buy-nora-sec             { min-height:100vh; background: #dbefff; position:relative;  }
+.buy-nora-sec:after       { background:url('../images/buy-nora-bg.png')no-repeat top center/100% auto; position:fixed; top:0 ; left:0; width:100%; height:100%; content:'' }
+.buy-nora-header          { background:#000 }
+.buy-nora-item            { text-align:center;}
+.buy-nora-item h3         {  font-size:32px; line-height:40px; font-weight:900; font-family: "Inter-700"; background:linear-gradient(to right, #49b9ff 0%, #3f5dff 100%); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  }
+.buy-nora-item p          { font-size:16px; line-height:27px; font-family: "Inter-400"; }
+
+.buy-nora-right-sec       { position:sticky;top: 100px;  }
 /* media query start */
 
 @media (min-width: 1501px) and (max-width: 1664px) {
@@ -674,13 +815,16 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 }
 
 @media (max-width: 1199.98px) {
+  .d-mobile             { display:block;  }
+  .d-desktop            { display:none;  }
   .main-first .gif-group { margin: 2rem auto; }
+  .country-dropdown a   { line-height:35px  }
 
   .top-header .btn-connectWallet { margin-bottom: 15px; }
 
   .top-header .header-navigation .hover-effect { transform: unset; }
 
-  .top-header .header-navigation .dropdown-menu { position: relative; margin-bottom: 20px; }
+  .top-header .header-navigation .dropdown-menu { position: relative; margin-bottom: 20px; left:0; transform:none; }
 
   .main-third .video-group .play-pause-image img { display: none; }
 
@@ -692,7 +836,7 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
   .hexagon-style img { width: 75%; }
 
-  .main-title::before { transform: scale(3.5); top: 2rem !important; }
+  .main-title::before { transform: scale(3.5); top: 3rem !important; }
 
   .navbar-collapse { max-height: 80vh; overflow-y: auto; overflow-x: hidden; }
 
@@ -701,7 +845,7 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
   .top-header nav ul { flex-direction: column !important; }
 
-  .top-header .header-navigation .header-navigation-link { line-height: 40px; font-size: 20px; text-align: center; }
+  .top-header .header-navigation .header-navigation-link { line-height: 22px; font-size: 16px; text-align: center; margin-bottom:15px }
 
   .main-first .information .title-second { line-height: 58px; font-size: 2.8rem; }
 
@@ -709,11 +853,11 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
   .main-third .video-group .play-pause-image img { width: 80%; }
 
-  .main-fourth .box::before { width: 85%; height: 53%; top: 30px; left: 36px; }
+  .main-fourth .box::before { width: 80%; top: 30px; left: 36px; height:50% }
 
   .main-fourth .box .box-title { font-size: 27px; }
 
-  .main-fourth .box .box-description { font-size: 18px; padding: 20px; }
+  .main-fourth .box .box-description { font-size: 15px; line-height: 20px; padding: 20px; }
 
   .main-fourth .box .btn-test-Alpha { margin-bottom: 22px; font-size: 14px; line-height: 23px; padding: 7px 19px; }
 
@@ -727,7 +871,15 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
   .horizontal-timline-slider .slider-blk .slider-desc { height: 173px; width: 173px; }
 
-  .our-team-sec ul { grid-template-columns: auto auto auto auto; }
+  .our-team-sec ul { grid-template-columns: auto auto auto; }
+  .nav-item { flex-wrap:wrap; align-items:flex-start; flex-direction:column;  }
+  body.german .main-sixth .main-title::before { font-size:70px  }
+/*  .lang-dropdown { position:fixed; !important; top:0 !important; right:100px !important; left:unset !important;  }*/
+/*  .nav .nav-item:last-child { position:absolute !important; top:0;  }*/
+  /*.navbar-collapse      { display:block; max-height:0; transition:0.3s max-height; }
+  body.menu-open .navbar-collapse { max-height:100vh; transition:0.3s max-height  */}
+  .lang-dropdown          {  margin-bottom:0; margin-top: 10px; margin-right:15px }
+  .lang-dropdown + .dropdown-menu { left:unset; right:10px  }
 }
 
 @media (max-width: 991.98px) {
@@ -762,7 +914,7 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
   .main-first .information .title-third { font-size: 1.22rem; }
 
-  .main-first .information-link .curvedArrow { top: -5rem; right: -1rem; width: 20%; }
+/*  .main-first .information-link .curvedArrow { top: -5rem; right: -1rem; width: 20%; }*/
 
   .main-first .social-media-group a { width: 30px; height: 30px; font-size: 14px; margin: 0; }
 
@@ -784,11 +936,11 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
   .main-fourth .main-title-second { font-size: 1.7rem; line-height: 39px; }
 
-  .main-fourth .box::before { width: 80%; height: 82.5%; background-size: 100% 100%; top: 26px; left: 36px; }
+  .main-fourth .box::before { width: 80%; height: 78%; background-size: 100% 100%; top: 26px; left: 36px; }
 
   .main-fourth .box .box-title { font-size: 21px; line-height: 21px; }
 
-  .main-fourth .box .box-description { font-size: 18px; padding: 33px 20px 15px; }
+  .main-fourth .box .box-description { font-size: 15px; line-height: 22px; padding: 33px 20px 15px; }
 
   .main-fourth .box .btn-test-Alpha { margin-bottom: 18px; }
 
@@ -850,12 +1002,16 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
   .footer-first .footer-group .content-left, .footer-first .footer-group .content-center a,
   .footer-first .footer-group .content-right a { font-size: 14px; }
+  body.german .main-sixth .main-title::before  { font-size:60px  }
 }
 
 @media (max-width: 767.98px) {
   .main-title::before { transform: scale(2); top: 3rem !important; }
 
   .hexagon-style img { width: 66%; }
+
+  .main-first .information-link { flex-direction:column;  }
+  .lang-dropdown  { margin-left:0 !important }
 
   .main-second .main-title, .main-third .main-title, .main-fourth .main-title, .main-fifth .main-title, .main-sixth .main-title, .main-seven .main-title,
   .main-eight .main-title, .our-team-sec .main-title, .main-tenth .main-title { font-size: 35px; line-height: 40px; }
@@ -868,11 +1024,12 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
   .main-first .information .title-third { line-height: 25px; font-size: 1.1rem; }
 
-  .main-first .information-link .curvedArrow { top: 0rem; right: 2rem; width: 16%; }
+/*  .main-first .information-link .curvedArrow { top: 0rem; right: 2rem; width: 16%; }*/
 
   .main-first .social-media-group { right: -0.85rem; height: 61%; }
 
-  .main-second .box { padding: 23px; min-height: 400px; max-width: 228px; }
+  .main-second .box { padding: 23px; min-height: 400px; max-width: 290px; margin:25px auto; }
+  .main-second  .col-md-4  { margin-bottom:25px  }
 
   .main-second .box .box-icon { width: 80px; height: 80px; }
 
@@ -938,6 +1095,7 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
   .footer-first .footer-group .content-right { order: 2; line-height: 25px; }
 
   .footer-first .footer-group .content-right a { font-size: 13px; }
+  body.german .main-sixth .main-title::before { font-size:40px  }
 }
 
 @media (max-width: 575.98px) {
@@ -969,7 +1127,8 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
   .main-fourth .box .box-title { font-size: 18px; line-height: 20px; }
 
-  .main-fourth .box .box-description { font-size: 16px; padding: 36px 20px 12px; }
+  .main-fourth .box .box-description { font-size: 14px; padding: 36px 20px 12px; }
+  .main-fifth .social-media .data { font-size:14px; line-height:18px  }
 
   .main-fifth .main-title span { font-size: 36px; }
 
@@ -1020,16 +1179,17 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
   .main-tenth .content .main-title { font-size: 27px; }
 
-  .main-tenth .content .content-text { font-size: 1.3rem; line-height: 20px; }
+  .main-tenth .content .content-text { font-size: 1.1rem; line-height: 20px; }
 
   ul.our-team-list li .profile-details .person-social-media { top: -19px; }
 
-  ul.our-team-list li .profile-details:nth-child(2) { padding-top: 7px; }
+  ul.our-team-list li .profile-details:nth-child(2) { padding-top: 7px; padding-left: 4px;
+    padding-right: 4px; }
 
 }
 
 @media (max-width: 550.98px) {
-  .main-first .information-link .curvedArrow { top: -1.75rem; right: 1rem; width: 16%; }
+/*  .main-first .information-link .curvedArrow { top: -1.75rem; right: 1rem; width: 16%; }*/
 
   .main-third .video-group .play-pause-image img { width: 30%; }
 
@@ -1118,7 +1278,7 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
   .box-container .data-list .list-title { font-size: 20px; }
 
-  .box-container .data-list ul li { font-size: 12px; line-height: 18px; }
+  .box-container .data-list ul li { font-size: 10px; line-height: 16px; }
 
 }
 
@@ -1204,7 +1364,30 @@ body.german .main-tenth .content .main-title::before { content: "Für weitere An
 
 .close-navbar-toggler { position: fixed; top: 0; left: 0; height: 100%; width: 100%; z-index: 1000; cursor: default; }
 .close-navbar-toggler.collapsed { z-index: -1; }
-@media(min-width:1200px) and (max-width:1699px){
+@media(min-width:1200px) and (max-width:1799px){
   .navbar-brand { max-width: 135px;}
   .top-header .navbar-brand img { width: 100%; }
+  .top-header .header-navigation .header-navigation-link { font-size:13px  }
+  .top-header .btn-connectWallet { font-size:12px;  }
+}
+@media(min-width:1200px) and (max-width:1399px){
+  .navbar-brand { max-width: 115px;}
+  .top-header .navbar-brand img { width: 100%; }
+  .top-header .header-navigation .header-navigation-link { font-size:11px  }
+  .top-header .btn-connectWallet { font-size:12px  }
+}
+@media(min-width:992px) and (max-width:1199px) {
+  body.chinese .main-fourth .box::before { height:82%  }
+  body.turkish .main-fourth .box::before { height:78%  }
+  body.rusian .main-fourth .box::before { height:78%  }
+  body.italian .main-fourth .box::before { height:82%; width:85%; height:75%  }
+  .main-fourth .box::before { height:65%; width:85% }
+}
+@media(min-width:768px) and (max-width:991px) {
+  body.chinese .main-fourth .box::before { height:76%; width:80%  }
+  .main-fourth .main-title-second { font-size:25px; line-height:34px  }
+  .main-fourth .box::before { height:80%  }
+}
+@media(max-width:380px) {
+  .top-header .navbar-brand img { max-width:155px  }
 }
