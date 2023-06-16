@@ -812,6 +812,8 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
 .snora-tabs .form-grp span { position: absolute; top:28px; right:0px; background:linear-gradient(133.31deg,#49b9ff,#3f5dff); height:45px;width:65px; border-radius:0px 25px 25px 0px; display:flex; align-items:center; justify-content:center;  }
 .snora-tabs .form-grp span img { max-width:25px;}
 .connect-wallet-btn        { margin-top: 15px; width:100%; min-height:45px; border-radius:25px; background:linear-gradient(133.31deg,#49b9ff,#3f5dff); border:none; color:#fff; font-weight:700; font-family: "Inter-600"; letter-spacing:1.5px; font-size:18px;  }
+.connect-wallet-btn:hover,
+.connect-wallet-btn:focus   { border:none; box-shadow:none; background:linear-gradient(133.31deg,#49b9ff,#3f5dff); }
 .presale-info-list         { margin-top:25px;  }
 .presale-info-list li      { margin-bottom: 7px; padding-left:20px; font-size:15px; line-height:22px; color:#415275; position:relative;}
 .presale-info-list li:after {  position:absolute; top:6px; left:3px;width:7px; height:7px;content:''; background:linear-gradient(133.31deg,#49b9ff,#3f5dff); border-radius:50% }
