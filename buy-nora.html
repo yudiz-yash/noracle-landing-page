@@ -188,7 +188,27 @@
           <div class="col-md-5">
             <div class="buy-nora-right-sec">
                 <div class="buy-nora-right-top-sec">
-                  test
+                  <ul class="timer-list">
+                     <li>
+                        <span class="coundown-count" id="setDay"></span>
+                        <span class="coundown-label">Days</span>
+                      </li>
+                      <li>
+                        <span class="coundown-count" id="setHour"></span>
+                        <span class="coundown-label">Hours</span>
+                      </li>
+                      <li>
+                        <span class="coundown-count" id="setMinute"></span>
+                        <span class="coundown-label">Minutes</span>
+                      </li>
+                      <li>
+                        <span class="coundown-count" id="setSecond"></span>
+                        <span class="coundown-label">Seconds</span>
+                      </li>
+                  </ul>
+                  <p>Until Presale</p>
+                  <h4>Total Presales Items:18,000,000 SNORA</h4>
+                  <h4>Remianing Presales Items:18,000,000 SNORA</h4>
                 </div>
                 <div class="buy-nora-right-bottom-sec">
                   <div class="snora-header">
@@ -210,11 +230,13 @@
                       <div class="tab-pane container active" id="home">
                         <div class="form-grp">
                           <label>Amount you paid in USDT</label>
-                          <input type="text" name="usdt-value" />
+                          <input type="text" name="usdt-value" value="0" />
+                          <span><img src="images/usdt-icon.svg" /></span>
                         </div>
                         <div class="form-grp">
                           <label>Number of SNORA You Recived</label>
-                          <input type="text" name="usdt-value" />
+                          <input type="text" name="usdt-value" value="0" />
+                          <span><img src="images/usdt-icon.svg" /></span>
                         </div>
                       </div>
                       <div class="tab-pane container fade" id="menu1">
@@ -238,8 +260,8 @@
                         </div>
                       </div>
                     </div>
-                    <button type="button">Connect Wallet</button>
-                    <ul>
+                    <button type="button" class="connect-wallet-btn">Connect Wallet</button>
+                    <ul class="presale-info-list">
                       <li>Chosse the currency you want to buy in</li>
                       <li>Enter your desired amount</li>
                       <li>Connect you r wallet,confirm the transaction and check your SNORA Balance</li>
@@ -252,7 +274,7 @@
     </div>
   </section>
 
-  <footer class="footer-first">
+ <!--  <footer class="footer-first">
     <div class="container">
       <div class="d-flex justify-content-between align-items-center flex-wrap footer-group">
         <div class="content-left text-center">
@@ -274,7 +296,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
   <div class="modal fade" id="ConnectWallet" tabindex="-1" role="dialog" aria-labelledby="ConnectWalletTitle"
     aria-hidden="true">
@@ -365,6 +387,38 @@
           $('body').css('overflow', 'auto')
         })
       });
+      var countDownDate = new Date("Jul 2, 2023 15:37:25").getTime();
+
+    timerLogic();
+
+    // Update the count down every 1 second
+    var timeInterval = setInterval(function () {
+
+      // Get today's date and time
+      timerLogic()
+
+      if (distance < 0) {
+        clearInterval(timeInterval);
+      }
+    }, 1000);
+
+    function timerLogic() {
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('setDay').innerText = days;
+      document.getElementById('setHour').innerText = hours;
+      document.getElementById('setMinute').innerText = minutes;
+      document.getElementById('setSecond').innerText = seconds;
+    }
     })
   </script>
 </body>
