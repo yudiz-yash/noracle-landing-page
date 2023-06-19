@@ -787,7 +787,7 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
 .buy-nora-sec:after       { background:url('../images/buy-nora-bg.png')no-repeat top center/cover; position:fixed; top:0 ; left:0; width:100vw; height:100%; content:'' }
 .buy-nora-sec .container  { position:relative; z-index:1 }
 .buy-nora-header          { background:#000 }
-.buy-nora-item            { text-align:center;}
+.buy-nora-item            { text-align:center; margin-bottom:30px; }
 .buy-nora-item h3         {  font-size:32px; line-height:40px; font-weight:900; font-family: "Inter-700"; background:linear-gradient(to right, #49b9ff 0%, #3f5dff 100%); -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;  }
 .buy-nora-item p          { margin-bottom: 10px; font-size:16px; line-height:27px; font-family: "Inter-600"; color:#415275 }
@@ -808,7 +808,8 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
 .snora-tabs .nav-link img { max-width:20px; margin-right:7px; max-height:20px  }
 .snora-tabs .form-grp     { margin-bottom:15px; position:relative; }
 .snora-tabs .form-grp label { margin-bottom:5px; font-size:14px; width:100%;  }
-.snora-tabs .form-grp input { width:100%; margin:0; background:transparent; box-shadow:none; border:none; border:1px solid #3f5dff; padding:8px 20px; padding-right: 65px; border-radius:20px; color:#415275; font-size:18px  }
+.snora-tabs .form-grp input { width:100%; margin:0; background:transparent; box-shadow:none; border:none; border:1px solid #3f5dff; padding:8px 20px; padding-right: 65px; border-radius:20px; color: #fff; font-size:18px  }
+.snora-tabs .form-grp input::placeholder { color:#415275; }
 .snora-tabs .tab-pane     { padding:0; }
 .snora-tabs .form-grp span { position: absolute; top:28px; right:0px; background:linear-gradient(133.31deg,#49b9ff,#3f5dff); height:45px;width:65px; border-radius:0px 25px 25px 0px; display:flex; align-items:center; justify-content:center;  }
 .snora-tabs .form-grp span img { max-width:25px;}
@@ -826,8 +827,15 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
 .timer-list li span.coundown-count  { font-size:35px; line-height: 1.2; margin-bottom:0; font-family: "Inter-700"; }
 .timer-list li span.coundown-label  { font-size:15px; color:#fff; opacity:0.7; }
 .buy-nora-right-top-sec p { font-size:15px; line-height:22px; text-align:center; margin-bottom:10px }
-.buy-nora-right-top-sec h4  { font-size:18px; text-align:center; opacity:0.7; font-family: "Inter-600"; }
-
+.buy-nora-right-top-sec h4  { font-size:16px; text-align:center; opacity:0.7; font-family: "Inter-600"; }
+.buy-nora-left-sec          { padding-right:30px; }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
 /*Buy Nora Page*/
 
 /* media query start */
@@ -1429,13 +1437,15 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
   .snora-tabs .nav-link span      { font-size:14px; }
   .timer-list li span.coundown-count  { font-size:30px;  }
   .timer-list li span.coundown-label    { font-size:14px; }
-  .buy-nora-right-top-sec h4      { font-size:16px; }
+  .buy-nora-right-top-sec h4      { font-size:14px; }
   .buy-nora-right-top-sec p       { font-size:14px; }
   .snora-header img                   { max-width:30px; }
   .snora-header span              { font-size:20px; }
   .snora-tabs .nav-item           { width:calc(100% / 3 - 10px); margin:0px 5px }
   .buy-nora-item h3               { font-size:28px; }
   .buy-nora-item p                { font-size:14px; margin-bottom:7px; }
+  .buy-nora-left-sec          { padding-right:0px; }
+  .buy-nora-left-sec          { padding-right:0px; }
 
   /*Buy Nora Page*/
 }
@@ -1462,6 +1472,8 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
   .buy-nora-sec .col-md-5         { max-width:100%; flex:0 0 100% }
   .buy-nora-sec .row              { flex-direction:column-reverse; }
   .buy-nora-right-sec             { margin-bottom:50px }
+  .buy-nora-left-sec          { padding-right:0px; }
+  .buy-nora-left-sec          { padding-right:0px; }
 
   /*Buy Nora Page*/
 }
@@ -1486,6 +1498,7 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
   .buy-nora-sec .row              { flex-direction:column-reverse; }
   .buy-nora-right-sec             { margin-bottom:50px }
   .snora-tabs .form-grp span img  { max-width:20px }
+  .buy-nora-left-sec          { padding-right:0px; }
 
   /*Buy Nora Page*/
 }
