@@ -86,3 +86,23 @@ if (y == 2) {
 //     }
 //   }
 // }
+
+$(document).ready(function (e) {
+
+  let _id = sessionStorage.getItem('tagName');
+
+  if (_id !== null) {
+
+    if (window.innerWidth < 1200) {
+      var position = $(`${_id}`).offset().top - 80;
+    }
+    else {
+      var position = $(`${_id}`).offset().top + 17;
+    }
+
+    gsap.to(window, { duration: 0.05, scrollTo: position });
+  }
+
+  sessionStorage.removeItem('tagName')
+
+});
