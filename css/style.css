@@ -805,7 +805,7 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
 .snora-tabs .nav-item     { width:calc(100% / 3 - 20px);  margin:0px 10px }
 .snora-tabs .nav-link     { width:100%; text-align:center; border:2px solid #3f5dff; border-radius: 25px; font-size:15px }
 .snora-tabs .nav-link.active {  background:linear-gradient(133.31deg,#49b9ff,#3f5dff)  }
-.snora-tabs .nav-link img { max-width:20px; margin-right:5px  }
+.snora-tabs .nav-link img { max-width:20px; margin-right:7px; max-height:20px  }
 .snora-tabs .form-grp     { margin-bottom:15px; position:relative; }
 .snora-tabs .form-grp label { margin-bottom:5px; font-size:14px; width:100%;  }
 .snora-tabs .form-grp input { width:100%; margin:0; background:transparent; box-shadow:none; border:none; border:1px solid #3f5dff; padding:8px 20px; padding-right: 65px; border-radius:20px; color:#415275; font-size:18px  }
@@ -1443,7 +1443,50 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
   body.chinese .main-fourth .box::before { height:76%; width:80%  }
   .main-fourth .main-title-second { font-size:25px; line-height:34px  }
   .main-fourth .box::before { height:80%  }
+
+  /*Buy Nora Page*/
+
+  .snora-tabs .nav-link           { padding:10px }
+  .snora-tabs .nav-link img       { max-width:20px  }
+  .snora-tabs .nav-link span      { font-size:14px; }
+  .timer-list li span.coundown-count  { font-size:30px;  }
+  .timer-list li span.coundown-label    { font-size:14px; }
+  .buy-nora-right-top-sec h4      { font-size:16px; }
+  .buy-nora-right-top-sec p       { font-size:14px; }
+  .snora-header img                   { max-width:30px; }
+  .snora-header span              { font-size:20px; }
+  .snora-tabs .nav-item           { width:calc(100% / 3 - 10px); margin:0px 5px }
+  .buy-nora-item h3               { font-size:28px; }
+  .buy-nora-item p                { font-size:14px; margin-bottom:7px; }
+  .buy-nora-sec .col-md-7,
+  .buy-nora-sec .col-md-5         { max-width:100%; flex:0 0 100% }
+  .buy-nora-sec .row              { flex-direction:column-reverse; }
+  .buy-nora-right-sec             { margin-bottom:50px }
+
+  /*Buy Nora Page*/
 }
 @media(max-width:380px) {
   .top-header .navbar-brand img { max-width:155px  }
 }
+@media(max-width:767px){
+   /*Buy Nora Page*/
+
+  .snora-tabs .nav-link           { padding:5px }
+  .snora-tabs .nav-link img       { max-width:12px  }
+  .snora-tabs .nav-link span      { font-size:12px; }
+  .timer-list li span.coundown-count  { font-size:22px;  }
+  .timer-list li span.coundown-label    { font-size:12px; }
+  .buy-nora-right-top-sec h4      { font-size:14px; }
+  .buy-nora-right-top-sec p       { font-size:12px; }
+  .snora-header img                   { max-width:30px; }
+  .snora-header span              { font-size:20px; }
+  .snora-tabs .nav-item           { width:calc(100% / 3 - 10px); margin:0px 5px }
+  .buy-nora-item h3               { font-size:22px; }
+  .buy-nora-item p                { font-size:13px; line-height: 20px; margin-bottom:5px; }
+  .buy-nora-sec .row              { flex-direction:column-reverse; }
+  .buy-nora-right-sec             { margin-bottom:50px }
+  .snora-tabs .form-grp span img  { max-width:20px }
+
+  /*Buy Nora Page*/
+}
+
