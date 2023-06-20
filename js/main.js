@@ -106,3 +106,5 @@ $(document).ready(function (e) {
   sessionStorage.removeItem('tagName')
 
 });
+
+const formatTime = (time) => time < 10 ? "0" + time : time;

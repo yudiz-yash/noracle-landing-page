@@ -43,7 +43,7 @@
         <div class="d-mobile">
           <a class="nav-link header-navigation-link dropdown-toggle btn btn-connectWallet lang-dropdown"
             id="navbarDropdown" href="" role="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">EN</a>
+            aria-expanded="false">RO</a>
           <!-- <div class="hover-effect position-absolute w-100 h-100"></div> -->
           <div class="dropdown-menu country-dropdown" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="buy-nora.html"><img src="images/flags/english.png" /><span>English</span></a>
@@ -286,36 +286,36 @@
                   <div class="tab-pane container active" id="home">
                     <div class="form-grp">
                       <label>Suma pe care o plătiți în USDT</label>
-                      <input type="number" placeholder="0" />
+                      <input type="number" inputmode="numeric" placeholder="0" />
                       <span><img src="images/usdt-icon.svg" /></span>
                     </div>
                     <div class="form-grp">
                       <label>Numărul de SNORA pe care îl primiți</label>
-                      <input type="number" placeholder="0" />
+                      <input type="number" inputmode="numeric" placeholder="0" />
                       <span><img src="images/snora-icon.svg" /></span>
                     </div>
                   </div>
                   <div class="tab-pane container fade" id="menu1">
                     <div class="form-grp">
                       <label>Suma pe care o plătiți în USDC</label>
-                      <input type="number" placeholder="0" />
+                      <input type="number" inputmode="numeric" placeholder="0" />
                       <span><img src="images/usdc-icon.svg" /></span>
                     </div>
                     <div class="form-grp">
                       <label>Numărul de SNORA pe care îl primiți</label>
-                      <input type="number" placeholder="0" />
+                      <input type="number" inputmode="numeric" placeholder="0" />
                       <span><img src="images/snora-icon.svg" /></span>
                     </div>
                   </div>
                   <div class="tab-pane container fade" id="menu2">
                     <div class="form-grp">
                       <label>Suma pe care o plătiți în MATIC</label>
-                      <input type="number" placeholder="0" />
+                      <input type="number" inputmode="numeric" placeholder="0" />
                       <span><img src="images/matic-icon.svg" /></span>
                     </div>
                     <div class="form-grp">
                       <label>Numărul de SNORA pe care îl primiți</label>
-                      <input type="number" placeholder="0" />
+                      <input type="number" inputmode="numeric" placeholder="0" />
                       <span><img src="images/snora-icon.svg" /></span>
                     </div>
                   </div>
@@ -433,7 +433,7 @@
           $('body').css('overflow', 'auto')
         })
       });
-      var countDownDate = new Date("Jul 2, 2023 15:37:25").getTime();
+      var countDownDate = new Date("Jul 2, 2023 0:37:25").getTime();
 
       timerLogic();
 
@@ -460,10 +460,10 @@
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('setDay').innerText = days;
-        document.getElementById('setHour').innerText = hours;
-        document.getElementById('setMinute').innerText = minutes;
-        document.getElementById('setSecond').innerText = seconds;
+        document.getElementById('setDay').innerText = formatTime(days);
+        document.getElementById('setHour').innerText = formatTime(hours);
+        document.getElementById('setMinute').innerText = formatTime(minutes);
+        document.getElementById('setSecond').innerText = formatTime(seconds);
       }
     })
   </script>
