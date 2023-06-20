@@ -797,29 +797,29 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
 .buy-nora-right-sec       { position:sticky;top: 100px; border-radius:25px; border:2px solid #3f5dff  }
 /*#mainfifth                { display:none; }*/
 #mainfifth                { padding:0; height:0 }
-.buy-nora-right-bottom-sec { background:#000; color:#fff; padding:20px; border-radius: 0 0 25px 25px;  }
+.buy-nora-right-bottom-sec { background:#000; color:#fff; padding:20px; border-radius: 0 0 23px 23px;  }
 .snora-header             { text-align:center; margin-bottom:25px; margin-top:05px  }
 .snora-header img         { max-width:45px; margin-right:15px }
 .snora-header span        { font-size:25px; line-height:32px; font-family: "Inter-700"; }
 .snora-tabs .nav          { display:flex; align-items:center; justify-content:center; margin:0px -10px; margin-bottom:10px }
 .snora-tabs .nav-item     { width:calc(100% / 3 - 20px);  margin:0px 10px }
 .snora-tabs .nav-link     { width:100%; text-align:center; border:2px solid #3f5dff; border-radius: 25px; font-size:15px }
-.snora-tabs .nav-link.active {  background:linear-gradient(133.31deg,#49b9ff,#3f5dff)  }
+.snora-tabs .nav-link.active {  background:linear-gradient(133.31deg,#49b9ff,#6477e1)  }
 .snora-tabs .nav-link img { max-width:20px; margin-right:7px; max-height:20px  }
 .snora-tabs .form-grp     { margin-bottom:15px; position:relative; }
 .snora-tabs .form-grp label { margin-bottom:5px; font-size:14px; width:100%;  }
 .snora-tabs .form-grp input { width:100%; margin:0; background:transparent; box-shadow:none; border:none; border:1px solid #3f5dff; padding:8px 20px; padding-right: 65px; border-radius:20px; color: #fff; font-size:18px  }
 .snora-tabs .form-grp input::placeholder { color:#415275; }
 .snora-tabs .tab-pane     { padding:0; }
-.snora-tabs .form-grp span { position: absolute; top:28px; right:0px; background:linear-gradient(133.31deg,#49b9ff,#3f5dff); height:45px;width:65px; border-radius:0px 25px 25px 0px; display:flex; align-items:center; justify-content:center;  }
+.snora-tabs .form-grp span { position: absolute; top:28px; right:0px; background:linear-gradient(133.31deg,#49b9ff,#6477e1); height:45px;width:65px; border-radius:0px 25px 25px 0px; display:flex; align-items:center; justify-content:center;  }
 .snora-tabs .form-grp span img { max-width:25px;}
-.connect-wallet-btn        { margin-top: 15px; width:100%; min-height:45px; border-radius:25px; background:linear-gradient(133.31deg,#49b9ff,#3f5dff); border:none; color:#fff; font-weight:700; font-family: "Inter-600"; letter-spacing:1.5px; font-size:18px; transform:scale(1); transition:0.3s; cursor:pointer; }
+.connect-wallet-btn        { margin-top: 15px; width:100%; min-height:45px; border-radius:25px; background:linear-gradient(133.31deg,#49b9ff,#6477e1); border:none; color:#fff; font-weight:700; font-family: "Inter-600"; letter-spacing:1.5px; font-size:18px; transform:scale(1); transition:0.3s; cursor:pointer; }
 .connect-wallet-btn:hover,
-.connect-wallet-btn:focus   { border:none; box-shadow:none; background:linear-gradient(133.31deg,#49b9ff,#3f5dff); transform:scale(1.05); transition:0.3s; }
+.connect-wallet-btn:focus   { border:none; box-shadow:none; background:linear-gradient(133.31deg,#49b9ff,#6477e1); transform:scale(1.05); transition:0.3s; }
 .presale-info-list         { margin-top:25px;  }
-.presale-info-list li      { margin-bottom: 7px; padding-left:20px; font-size:15px; line-height:22px; color:#415275; position:relative;}
-.presale-info-list li:after {  position:absolute; top:6px; left:3px;width:7px; height:7px;content:''; background:linear-gradient(133.31deg,#49b9ff,#3f5dff); border-radius:50% }
-.buy-nora-right-top-sec     { padding: 15px; border-radius: 25px 25px 0px 0px; background:linear-gradient(133.31deg,#49b9ff,#3f5dff); color:#fff }
+.presale-info-list li      { margin-bottom: 7px; padding-left:20px; font-size:15px; line-height:22px; color:#dfeaf3; position:relative;}
+.presale-info-list li:after {  position:absolute; top:6px; left:3px;width:7px; height:7px;content:''; background:linear-gradient(133.31deg,#49b9ff,#6477e1); border-radius:50% }
+.buy-nora-right-top-sec     { padding: 15px; border-radius: 23px 23px 0px 0px; background:linear-gradient(133.31deg,#49b9ff,#6477e1); color:#fff }
 .timer-list                 { margin-bottom: 10px; display:flex; align-items:center; justify-content:center }
 .timer-list li              { display:flex; flex-direction:column; align-items:center; justify-content:center; margin:0px 15px; position:relative; }
 .timer-list li:after        { position:absolute; top:5px; right:-20px; content:':'; font-size:30px; line-height:30px; font-family: "Inter-700";  }
@@ -836,6 +836,10 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0; 
 }
+.lang-dropdown              { padding-left:35px !important; padding-right: 25px !important; position:relative; font-size: 12px !important}
+.lang-dropdown:after        { position:absolute; top:50%; transform: translateY(-50%); left:7px; width:17px; height:17px; content:''; background:url('../images/flags/flag-icon.svg')no-repeat center center/cover; border:none; }
+.lang-dropdown:before       { position: absolute;  top:50%; transform: translateY(-50%);  display: inline-block; width: 0; height: 0; margin-left: 0.255em; vertical-align: 0.255em; content: ""; border-top: 0.45em solid; border-right: 0.45em solid transparent; border-bottom: 0; border-left: 0.45em solid transparent; right:10px }
+
 /*Buy Nora Page*/
 
 /* media query start */
@@ -859,6 +863,7 @@ input[type=number]::-webkit-outer-spin-button {
   .main-sixth .image-group { min-height: 668px; }
 
   .our-team-sec ul { grid-template-columns: auto auto auto auto; }
+  .lang-dropdown  { font-size:13px !important }
 }
 
 @media (max-width: 1199.98px) {
