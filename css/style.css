@@ -798,7 +798,7 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
 /*#mainfifth                { display:none; }*/
 #mainfifth                { padding:0; height:0 }
 .buy-nora-right-bottom-sec { background:#000; color:#fff; padding:20px; border-radius: 0 0 23px 23px;  }
-.snora-header             { text-align:center; margin-bottom:25px; margin-top:05px  }
+.snora-header             { text-align:center; margin-bottom:25px; margin-top:05px; display:flex; align-items:center; justify-content:center;  }
 .snora-header img         { max-width:45px; margin-right:15px }
 .snora-header span        { font-size:25px; line-height:32px; font-family: "Inter-700"; }
 .snora-tabs .nav          { display:flex; align-items:center; justify-content:center; margin:0px -10px; margin-bottom:10px }
@@ -807,15 +807,15 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
 .snora-tabs .nav-link.active {  background:linear-gradient(133.31deg,#49b9ff,#6477e1)  }
 .snora-tabs .nav-link img { max-width:20px; margin-right:7px; max-height:20px  }
 .snora-tabs .form-grp     { margin-bottom:15px; position:relative; }
-.snora-tabs .form-grp label { margin-bottom:5px; font-size:14px; width:100%;  }
-.snora-tabs .form-grp input { width:100%; margin:0; background:transparent; box-shadow:none; border:none; border:1px solid #3f5dff; padding:8px 20px; padding-right: 65px; border-radius:20px; color: #fff; font-size:18px  }
+.snora-tabs .form-grp label { padding-left: 10px; margin-bottom:5px; font-size:14px; width:100%;  }
+.snora-tabs .form-grp input { width:100%; margin:0; background:transparent; box-shadow:none; border:none; border:2px solid #3f5dff; padding:8px 20px; padding-right: 65px; border-radius:20px; color: #fff; font-size:18px  }
 .snora-tabs .form-grp input::placeholder { color:#415275; }
 .snora-tabs .tab-pane     { padding:0; }
-.snora-tabs .form-grp span { position: absolute; top:28px; right:0px; background:linear-gradient(133.31deg,#49b9ff,#6477e1); height:45px;width:65px; border-radius:0px 25px 25px 0px; display:flex; align-items:center; justify-content:center;  }
+.snora-tabs .form-grp span { position: absolute; top:29px; right:-1px; background:linear-gradient(133.31deg,#49b9ff,#6477e1); height:45px;width:65px; border-radius:0px 25px 25px 0px; display:flex; align-items:center; justify-content:center;  }
 .snora-tabs .form-grp span img { max-width:25px;}
 .connect-wallet-btn        { margin-top: 15px; width:100%; min-height:45px; border-radius:25px; background:linear-gradient(133.31deg,#49b9ff,#6477e1); border:none; color:#fff; font-weight:700; font-family: "Inter-600"; letter-spacing:1.5px; font-size:18px; transform:scale(1); transition:0.3s; cursor:pointer; }
-.connect-wallet-btn:hover,
-.connect-wallet-btn:focus   { border:none; box-shadow:none; background:linear-gradient(133.31deg,#49b9ff,#6477e1); transform:scale(1.05); transition:0.3s; }
+.connect-wallet-btn:hover   { border:none; box-shadow:none; background:linear-gradient(133.31deg,#49b9ff,#6477e1); transform:scale(1.05); transition:0.3s; }
+.connect-wallet-btn:focus   { transform:scale(1.0); transition:0.3s; border:none; box-shadow:none;background:linear-gradient(133.31deg,#49b9ff,#6477e1); outline:none; }
 .presale-info-list         { margin-top:25px;  }
 .presale-info-list li      { margin-bottom: 7px; padding-left:20px; font-size:15px; line-height:22px; color:#dfeaf3; position:relative;}
 .presale-info-list li:after {  position:absolute; top:6px; left:3px;width:7px; height:7px;content:''; background:linear-gradient(133.31deg,#49b9ff,#6477e1); border-radius:50% }
@@ -825,9 +825,9 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
 .timer-list li:after        { position:absolute; top:5px; right:-20px; content:':'; font-size:30px; line-height:30px; font-family: "Inter-700";  }
 .timer-list li:last-child:after { display:none; }
 .timer-list li span.coundown-count  { font-size:35px; line-height: 1.2; margin-bottom:0; font-family: "Inter-700"; }
-.timer-list li span.coundown-label  { font-size:15px; color:#fff; opacity:0.7; }
+.timer-list li span.coundown-label  { font-size:15px; color:#fff; opacity:0.7; text-transform:uppercase; }
 .buy-nora-right-top-sec p { font-size:15px; line-height:22px; text-align:center; margin-bottom:10px }
-.buy-nora-right-top-sec h4  { font-size:16px; text-align:center; opacity:0.7; font-family: "Inter-600"; }
+.buy-nora-right-top-sec h4  { font-size:16px; text-align:center; opacity:0.8; font-family: "Inter-600"; }
 .buy-nora-left-sec          { padding-right:30px; }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -836,9 +836,14 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0; 
 }
+input[type=number] {
+    -moz-appearance:textfield;
+}
 .lang-dropdown              { padding-left:35px !important; padding-right: 25px !important; position:relative; font-size: 12px !important}
 .lang-dropdown:after        { position:absolute; top:50%; transform: translateY(-50%); left:7px; width:17px; height:17px; content:''; background:url('../images/flags/flag-icon.svg')no-repeat center center/cover; border:none; }
 .lang-dropdown:before       { position: absolute;  top:50%; transform: translateY(-50%);  display: inline-block; width: 0; height: 0; margin-left: 0.255em; vertical-align: 0.255em; content: ""; border-top: 0.45em solid; border-right: 0.45em solid transparent; border-bottom: 0; border-left: 0.45em solid transparent; right:10px }
+
+.lang-dropdown + .dropdown-menu  { max-height:80vh; overflow-y:auto;  }
 
 /*Buy Nora Page*/
 
