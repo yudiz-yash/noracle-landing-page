@@ -1509,6 +1509,7 @@ input[type=number] {
   .buy-nora-right-sec             { margin-bottom:50px }
   .snora-tabs .form-grp span img  { max-width:20px }
   .buy-nora-left-sec          { padding-right:0px; }
+  .buy-nora-sec:after             { position:absolute; }
 
   /*Buy Nora Page*/
 }
