@@ -847,6 +847,26 @@ input[type=number] {
 
 /*Buy Nora Page*/
 
+/* Annoucement Section */
+
+.annoucement-section        { padding-top: 40px; position: relative; z-index: 99; text-align: center; }
+.annoucement-section .container { position: relative;}
+.annoucement-slider         { position: relative; padding: 10px 30px!important; font-size: 25px; line-height: 33px;   color: #fff; background: linear-gradient(180deg, rgba(63, 93, 255, 0.162) -2.55%, rgba(73, 185, 255, 0.075) 102.04%);border: 2px solid #49b9ff;border-radius: 20px;position: relative;width: 100%;  }
+.annoucement-slider div     { font-weight: 700; font-family: "Inter-700"; }
+.announcement-icon          { max-width: 45px; position: absolute; top: 50%; transform: translateY(-50%); left: 0; }
+.announcement-icon.right-icon { transform: translateY(-50%) rotate(180deg); left: unset; right: 0; }
+.annoucement-slider .slick-slide > div > div  { min-height: 70px; display: flex !important; align-items: center; justify-content: center; }
+.main-first .container>div  { padding-top: 60px;;}
+.annoucement-slider .slick-dots  { bottom: -30px; left: 0; }
+.annoucement-slider .slick-dots li { width: 10px; height: 10px; margin: 0px 7px; }
+.annoucement-slider .slick-dots li button { width: 10px; height: 10px;  border-radius: 50%; border: 1.5px solid #49b9ff;   }
+.annoucement-slider .slick-dots li.slick-active button {background: radial-gradient(64.38% 64.38% at 35.13% 21.75%, #49b9ff 0%, #3f5dff 100%); }
+.annoucement-slider .slick-dots li button::before { display: none; }
+.annoucement-slider .slick-track {  display: flex; align-items: center; }
+footer                        { position: relative; }
+
+/* Annoucement Section */
+
 /* media query start */
 
 @media (min-width: 1501px) and (max-width: 1664px) {
@@ -1300,6 +1320,9 @@ input[type=number] {
 
   .box-container li.data-list:nth-child(6n + 6)>div::before { height: 100%; top: 50%; }
   .snora-tabs .form-grp span  { height: 47px;;}
+  .main-first .container>div  { padding-top: 40px;;}
+  .annoucement-slider  { font-size: 20px;  line-height: 30px;}
+  .annoucement-slider .slick-slide > div > div { min-height: 60px; }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1338,6 +1361,9 @@ input[type=number] {
 
   .box-container .data-list ul li { font-size: 10px; line-height: 16px; }
   .snora-tabs .form-grp span  { height: 47px;;}
+  .main-first .container>div  { padding-top: 40px;;}
+  .annoucement-slider  { font-size: 20px; line-height: 30px; }
+  .annoucement-slider .slick-slide > div > div { min-height: 60px; }
 
 }
 
@@ -1377,6 +1403,9 @@ input[type=number] {
   .box-container .data-list .list-title { font-size: 18px; }
 
   .box-container .data-list ul li { font-size: 13px; }
+  .annoucement-slider  { font-size: 16px; line-height: 24px; padding: 10px 20px !important; }
+  .annoucement-slider .slick-slide > div > div { min-height: 50px; }
+  .announcement-icon  { max-width: 30px; }
 
 }
 
