@@ -812,7 +812,7 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
 .snora-tabs .form-grp input::placeholder { color:#415275; }
 .snora-tabs .tab-pane     { padding:0; }
 .snora-tabs .form-grp span { position: absolute; top:29px; right:-1px; background:linear-gradient(133.31deg,#49b9ff,#6477e1); height:45px;width:65px; border-radius:0px 25px 25px 0px; display:flex; align-items:center; justify-content:center;  }
-.snora-tabs .form-grp span img { max-width:25px;}
+.snora-tabs .form-grp span img { max-width:25px; max-height: 20px;}
 .connect-wallet-btn        { margin-top: 15px; width:100%; min-height:45px; border-radius:25px; background:linear-gradient(133.31deg,#49b9ff,#6477e1); border:none; color:#fff; font-weight:700; font-family: "Inter-600"; letter-spacing:1.5px; font-size:18px; transform:scale(1); transition:0.3s; cursor:pointer; }
 .connect-wallet-btn:hover   { border:none; box-shadow:none; background:linear-gradient(133.31deg,#49b9ff,#6477e1); transform:scale(1.05); transition:0.3s; }
 .connect-wallet-btn:focus   { transform:scale(1.0); transition:0.3s; border:none; box-shadow:none;background:linear-gradient(133.31deg,#49b9ff,#6477e1); outline:none; }
@@ -895,7 +895,7 @@ input[type=number] {
 
   .main-title::before { transform: scale(3.5); top: 3rem !important; }
 
-  .navbar-collapse { max-height: 80vh; overflow-y: auto; overflow-x: hidden; }
+  .navbar-collapse { max-height: 65vh; overflow-y: auto; overflow-x: hidden; }
 
   .main-first .container>div, .main-second, .main-third, .main-fourth, .main-fifth,
   .main-sixth, .main-seven, .main-eight, .our-team-sec { padding: 4rem 5px; }
@@ -1299,6 +1299,7 @@ input[type=number] {
   .box-container li.data-list:nth-child(3)>div::before { height: 100%; top: 50%; }
 
   .box-container li.data-list:nth-child(6n + 6)>div::before { height: 100%; top: 50%; }
+  .snora-tabs .form-grp span  { height: 47px;;}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1336,6 +1337,7 @@ input[type=number] {
   .box-container .data-list .list-title { font-size: 20px; }
 
   .box-container .data-list ul li { font-size: 10px; line-height: 16px; }
+  .snora-tabs .form-grp span  { height: 47px;;}
 
 }
 
