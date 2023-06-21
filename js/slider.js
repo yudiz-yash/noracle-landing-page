@@ -1,9 +1,9 @@
 const isSliderVisible = true;
 const aAnnouncement = [
-    "$NORA Token Pre-Sale Amount",
-    "$NORA Token Pre-Sale Comming Soon",
-    "$NORA Token Pre-Sale Amount",
-    "$NORA Token Pre-Sale Comming Soon",
+    `$NORA Token Pre-Sale Amount`,
+    `$NORA Token Pre-Sale Comming Soon`,
+    `$NORA Token Pre-Sale Amount`,
+    `$NORA Token Pre-Sale Comming Soon`,
 ]
 const list = document.getElementById("announcement-list");
 aAnnouncement.forEach((value) => {
