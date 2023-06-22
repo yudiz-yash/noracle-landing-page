@@ -855,7 +855,8 @@ input[type=number] {
 .annoucement-slider div     { font-weight: 700; font-family: "Inter-700"; }
 .announcement-icon          { max-width: 45px; position: absolute; top: 50%; transform: translateY(-50%); left: 0; }
 .announcement-icon.right-icon { transform: translateY(-50%) rotate(180deg); left: unset; right: 0; }
-.annoucement-slider .slick-slide > div > div  { min-height: 70px; display: flex !important; align-items: center; justify-content: center; }
+.annoucement-slider .slick-slide > div > a  { min-height: 70px; display: flex !important; align-items: center; justify-content: center; color: #fff; text-decoration: none; cursor: pointer;  font-weight: 700; font-family: "Inter-700"; }
+.annoucement-slider .slick-slide > div > a:hover { background: linear-gradient(to right, #49b9ff 0%, #3f5dff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .main-first .container>div  { padding-top: 60px;;}
 .annoucement-slider .slick-dots  { bottom: -30px; left: 0; }
 .annoucement-slider .slick-dots li { width: 10px; height: 10px; margin: 0px 7px; }
@@ -1322,7 +1323,7 @@ footer                        { position: relative; }
   .snora-tabs .form-grp span  { height: 47px;;}
   .main-first .container>div  { padding-top: 40px;;}
   .annoucement-slider  { font-size: 20px;  line-height: 30px;}
-  .annoucement-slider .slick-slide > div > div { min-height: 60px; }
+  .annoucement-slider .slick-slide > div > a { min-height: 60px; }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1363,7 +1364,7 @@ footer                        { position: relative; }
   .snora-tabs .form-grp span  { height: 47px;;}
   .main-first .container>div  { padding-top: 40px;;}
   .annoucement-slider  { font-size: 20px; line-height: 30px; }
-  .annoucement-slider .slick-slide > div > div { min-height: 60px; }
+  .annoucement-slider .slick-slide > div > a { min-height: 60px; }
 
 }
 
@@ -1404,7 +1405,7 @@ footer                        { position: relative; }
 
   .box-container .data-list ul li { font-size: 13px; }
   .annoucement-slider  { font-size: 16px; line-height: 24px; padding: 10px 20px !important; }
-  .annoucement-slider .slick-slide > div > div { min-height: 50px; }
+  .annoucement-slider .slick-slide > div > a { min-height: 50px; }
   .announcement-icon  { max-width: 30px; }
 
 }
