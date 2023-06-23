@@ -1,46 +1,46 @@
 const isSliderVisible = true;
 const oAnnouncements = {
     EN: [
-        { value: '$NORA Token Pre-Sale Amount', link: 'buy-nora.html' },
+        { value: '$NORA Token Pre-Sale News', link: 'buy-nora.html' },
     ],
     FR: [
-        { value: 'Montant de la prévente du jeton $NORA', link: 'buy-nora-french.html' },
+        { value: 'Nouvelles de prévente de jetons $NORA', link: 'buy-nora-french.html' },
     ],
     DE: [
-        { value: 'Vorverkaufsbetrag für $NORA-Token', link: 'buy-nora-german.html' },
+        { value: 'Vorverkaufsnachrichten für $NORA-Token', link: 'buy-nora-german.html' },
     ],
     ES: [
-        { value: 'Cantidad de preventa del token de $NORA', link: 'buy-nora-spaish.html' },
+        { value: 'Noticias de preventa de tokens de $NORA', link: 'buy-nora-spaish.html' },
     ],
     IT: [
-        { value: 'Importo di prevendita del token $NORA', link: 'buy-nora-italian.html' },
+        { value: 'Notizie sulla prevendita del token $NORA', link: 'buy-nora-italian.html' },
     ],
     PT: [
-        { value: 'Valor de pré-venda do token $NORA', link: 'buy-nora-portuguese.html' },
+        { value: 'Notícias de pré-venda do token $NORA', link: 'buy-nora-portuguese.html' },
     ],
     NL: [
-        { value: '$ NORA Token Pre-Sale Bedrag', link: 'buy-nora-dutch.html' },
+        { value: '$NORA Token Pre-Sale Nieuws', link: 'buy-nora-dutch.html' },
     ],
     TK: [
-        { value: '$NORA Token Ön Satış Tutarı', link: 'buy-nora-turkish.html' },
+        { value: '$NORA Token Ön Satış Haberleri', link: 'buy-nora-turkish.html' },
     ],
     RU: [
-        { value: 'Предпродажная сумма токена $NORA', link: 'buy-nora-russian.html' },
+        { value: 'Новости предпродажи токенов $NORA', link: 'buy-nora-russian.html' },
     ],
     RO: [
-        { value: 'Suma de pre-vânzare $ NORA Token', link: 'buy-nora-romanian.html' },
+        { value: 'Știri de pre-vânzare $ NORA Token', link: 'buy-nora-romanian.html' },
     ],
     ZH: [
-        { value: '$NORA 代币预售金额', link: 'buy-nora-chinese.html' },
+        { value: '$NORA 代币预售新闻', link: 'buy-nora-chinese.html' },
     ],
     KO: [
-        { value: '$NORA 토큰 사전 판매 금액', link: 'buy-nora-korean.html' },
+        { value: '$NORA 토큰 사전 판매 뉴스', link: 'buy-nora-korean.html' },
     ],
     PL: [
-        { value: 'Kwota przedsprzedaży tokena NORA $', link: 'buy-nora-polish.html' },
+        { value: 'Wiadomości z przedsprzedaży tokenów $NORA', link: 'buy-nora-polish.html' },
     ],
     JA: [
-        { value: '$NORA トークンのプレセール額', link: 'buy-nora-japanese.html' },
+        { value: '$NORA トークンのプレセール ニュース', link: 'buy-nora-japanese.html' },
     ],
 }
 const country = document.getElementById('navbarDropdown')
