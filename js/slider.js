@@ -51,7 +51,6 @@ if (list) {
         const listItem = document.createElement("a");
         listItem.textContent = obj.value;
         listItem.href = obj.link;
-        listItem.target = "_blank";
         list.appendChild(listItem);
     });
 }
