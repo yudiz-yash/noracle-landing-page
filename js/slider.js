@@ -1,46 +1,46 @@
 const isSliderVisible = true;
 const oAnnouncements = {
     EN: [
-        { value: '$NORA Token Pre-Sale News', link: 'buy-nora.html' },
+        { value: '$NORA Token Pre-Sales on July 12, 2023.', link: 'buy-nora.html' },
     ],
     FR: [
-        { value: 'Nouvelles de prévente de jetons $NORA', link: 'buy-nora-french.html' },
+        { value: 'Préventes de jetons $NORA le 12 juillet 2023', link: 'buy-nora-french.html' },
     ],
     DE: [
-        { value: 'Vorverkaufsnachrichten für $NORA-Token', link: 'buy-nora-german.html' },
+        { value: '$NORA-Token-Vorverkäufe am 12. Juli 2023', link: 'buy-nora-german.html' },
     ],
     ES: [
-        { value: 'Noticias de preventa de tokens de $NORA', link: 'buy-nora-spaish.html' },
+        { value: 'Preventa de tokens $NORA el 12 de julio de 2023', link: 'buy-nora-spanish.html' },
     ],
     IT: [
-        { value: 'Notizie sulla prevendita del token $NORA', link: 'buy-nora-italian.html' },
+        { value: 'Prevendita del gettone NORA il 12 luglio 2023', link: 'buy-nora-italian.html' },
     ],
     PT: [
-        { value: 'Notícias de pré-venda do token $NORA', link: 'buy-nora-portuguese.html' },
+        { value: 'Pré-venda do Token $NORA em 12 de julho de 2023', link: 'buy-nora-portuguese.html' },
     ],
     NL: [
-        { value: '$NORA Token Pre-Sale Nieuws', link: 'buy-nora-dutch.html' },
+        { value: '$NORA Token voorverkoop op 12 juli 2023', link: 'buy-nora-dutch.html' },
     ],
     TK: [
-        { value: '$NORA Token Ön Satış Haberleri', link: 'buy-nora-turkish.html' },
+        { value: '$NORA Token Ön Satışı 12 Temmuz 2023\'te', link: 'buy-nora-turkish.html' },
     ],
     RU: [
-        { value: 'Новости предпродажи токенов $NORA', link: 'buy-nora-russian.html' },
+        { value: 'Предварительная продажа токенов $NORA 12 июля 2023 года', link: 'buy-nora-russian.html' },
     ],
     RO: [
-        { value: 'Știri de pre-vânzare $ NORA Token', link: 'buy-nora-romanian.html' },
+        { value: '$NORA Token Pre-vânzare pe 12 iulie 2023', link: 'buy-nora-romanian.html' },
     ],
     ZH: [
-        { value: '$NORA 代币预售新闻', link: 'buy-nora-chinese.html' },
+        { value: '2023年7月12日，$NORA代币预售', link: 'buy-nora-chinese.html' },
     ],
     KO: [
-        { value: '$NORA 토큰 사전 판매 뉴스', link: 'buy-nora-korean.html' },
+        { value: '2023년 7월 12일 $NORA 토큰 프리세일', link: 'buy-nora-korean.html' },
     ],
     PL: [
-        { value: 'Wiadomości z przedsprzedaży tokenów $NORA', link: 'buy-nora-polish.html' },
+        { value: 'Przedsprzedaż tokena NORA w dniu 12 lipca 2023 r', link: 'buy-nora-polish.html' },
     ],
     JA: [
-        { value: '$NORA トークンのプレセール ニュース', link: 'buy-nora-japanese.html' },
+        { value: '2023年7月12日に$NORAトークン先行販売', link: 'buy-nora-japanese.html' },
     ],
 }
 const country = document.getElementById('navbarDropdown')
