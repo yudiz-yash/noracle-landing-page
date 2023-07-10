@@ -458,7 +458,8 @@
           $('body').css('overflow', 'auto')
         })
       });
-      var countDownDate = new Date("Jul 12, 2023 20:30:00").getTime();
+      var countDownDate = new Date("Jul 12, 2023 15:00:00").getTime();
+      var distance;
 
       timerLogic();
 
@@ -474,10 +475,18 @@
       }, 1000);
 
       function timerLogic() {
-        var now = new Date().getTime();
-
+        var now = new Date();
+        var utcNow = new Date(
+          now.getUTCFullYear(),
+          now.getUTCMonth(),
+          now.getUTCDate(),
+          now.getUTCHours(),
+          now.getUTCMinutes(),
+          now.getUTCSeconds()
+        ); // Current UTC time
+        
         // Find the distance between now and the count down date
-        var distance = countDownDate - now;
+        distance = countDownDate - utcNow;
 
         // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
