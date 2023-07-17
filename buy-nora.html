@@ -208,7 +208,9 @@
                   whitelist</a> to get your NORA at just $0.02</p>
               <p>Whitelist Sales: from 03:00 PM UTC to 04:00 PM UTC</p>
               <br />
-              <p>Presales on first come, first served basis (<a target="_blank" href="https://medium.com/@media.noracle/noracle-presales-announcement-c5b54e30d327/">more details here</a>)</p>
+              <p>Presales on first come, first served basis (<a target="_blank"
+                  href="https://medium.com/@media.noracle/noracle-presales-announcement-c5b54e30d327/">more details
+                  here</a>)</p>
               <p>Presales Prices $0.03 and $0.04</p>
               <p>Listing Price: $0.06</p>
             </div>
@@ -271,7 +273,8 @@
         <div class="col-md-5">
           <div class="buy-nora-right-sec">
             <div class="buy-nora-right-top-sec">
-              <ul class="timer-list">
+
+              <ul class="timer-list" id="setText">
                 <li>
                   <span class="coundown-count" id="setDay"></span>
                   <span class="coundown-label">Days</span>
@@ -295,7 +298,7 @@
             </div>
             <div class="buy-nora-right-bottom-sec">
               <div class="snora-header">
-                <img src="images/logo.svg"><span>Buy SNORA</span>
+                <img src="images/logo.svg"><span id="addAmout">Buy SNORA</span>
               </div>
               <div class="snora-tabs">
                 <ul class="nav nav-pills">
@@ -352,6 +355,7 @@
                 </div>
                 <button type="button" class="connect-wallet-btn">Connect your wallet</button>
                 <ul class="presale-info-list">
+                  <li>Connect wallet </li>
                   <li>Choose the currency you want to buy in</li>
                   <li>Enter your desired amount</li>
                   <li>Press on Buy, confirm the transaction, and check your SNORA balance</li>
@@ -461,24 +465,103 @@
           $('body').css('overflow', 'auto')
         })
       });
-      var countDownDate = new Date("Jul 12, 2023 15:00:00").getTime();
+      var setDate = new Date();
+      // first timer
+      var countDownDate = new Date(
+        setDate.getUTCFullYear(),
+        setDate.getUTCMonth(),
+        setDate.getUTCDate(),
+        setDate.getUTCHours(),
+        setDate.getUTCMinutes(),
+        setDate.getUTCSeconds() + 15
+      ).getTime();
+
+      // var countDownDate = new Date("Jul 13, 2023 13:08:00").getTime();
       var distance;
-
+      var temp = true;
+      var timeProgressOver = false;
       timerLogic();
-
+      stratInterval();
       // Update the count down every 1 second
-      var timeInterval = setInterval(function () {
+      var interval;
+      var timeInterval;
+      //timer progressbar
+      var startTime = { hh: 14, mm: 27, ss: 0, ms: 0 }
+      var EndTime = { hh: 14, mm: 28, ss: 0, ms: 0 }
 
-        // Get today's date and time
-        timerLogic()
+      function stratInterval() {
+        timeInterval = setInterval(function () {
+          if (distance <= 0) {
+            document.getElementById('setText').innerHTML = `
+            <li>
+              <span class="coundown-count">PRESALE LIVE</span>
+              <span class="coundown-label">Whitelist sale ends in <span class="coundown-label" id="setTime"></span></span>
+              </li>
+              `;
+            if (temp == false) {
+              if (!timeProgressOver) {
+                document.getElementById('setText').innerHTML = `
+                <li class="">
+                  <span class="coundown-count">PRESALE LIVE</span>
+                  <span class="coundown-count">
+                    <progress id = "progressbar" max="100" value="${getTimePercentage(startTime, EndTime)}"></progress>
+                    <div class="progressbar-text">
+                      <span>${startTime.hh}:${startTime.mm}</span>
+                      <span>${EndTime.hh}:${EndTime.mm}</span>
+                      </div>
+                      </span>
+                      </span>
+                      </li>`;
+              }
+              else{
+                document.getElementById('setText').innerHTML = `
+                <li class="">
+                  <span class="coundown-count">PRESALE LIVE</span>
+                    <span class="coundown-count">
+                      <progress id = "progressbar" max="100" value="50"></progress>
+                    </span>
+                  </span>
+                </li>`;
+              }
+              return;
+            } else {
+              temp = false;
+              countdown();
+            }
+          } else {
+            timerLogic()
+          }
+        }, 1000);
+      }
 
-        if (distance < 0) {
-          clearInterval(timeInterval);
+      function getTimePercentage(startTime, EndTime) {
+        const now = new Date();
+        const start = new Date(now);
+        start.setHours(startTime.hh, startTime.mm, startTime.ss, startTime.ms); // Set the start time to 4 PM (16:00:00)
+
+        const end = new Date(now);
+        end.setHours(EndTime.hh, EndTime.mm, EndTime.ss, EndTime.ms); // Set the end time to 6 PM (18:00:00)
+
+        const totalTime = end - start;
+        const elapsedTime = now - start;
+        const percentage = (elapsedTime / totalTime) * 100;
+
+        if (percentage > 100) {
+          timeProgressOver = true;
+          return 100
         }
-      }, 1000);
+        else {
+          return percentage;
+        }
+      }
+      if (timeProgressOver == true) {
+        document
+      }
+
 
       function timerLogic() {
         var now = new Date();
+        //currentTimer
         var utcNow = new Date(
           now.getUTCFullYear(),
           now.getUTCMonth(),
@@ -487,23 +570,89 @@
           now.getUTCMinutes(),
           now.getUTCSeconds()
         ); // Current UTC time
-        console.log(utcNow)
         // Find the distance between now and the count down date
         distance = countDownDate - utcNow;
-
         // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('setDay').innerText = formatTime(days);
-        document.getElementById('setHour').innerText = formatTime(hours);
-        document.getElementById('setMinute').innerText = formatTime(minutes);
-        document.getElementById('setSecond').innerText = formatTime(seconds);
+        if (temp == false && distance <= 0) {
+          distance = 1;
+          if (!timeProgressOver) {
+                document.getElementById('setText').innerHTML = `
+                <li class="">
+                  <span class="coundown-count">PRESALE LIVE</span>
+                  <span class="coundown-count">
+                    <progress id = "progressbar" max="100" value="${getTimePercentage(startTime, EndTime)}"></progress>
+                    <div class="progressbar-text">
+                      <span>${startTime.hh}:${startTime.mm}</span>
+                      <span>${EndTime.hh}:${EndTime.mm}</span>
+                      </div>
+                      </span>
+                      </span>
+                      </li>`;
+              }
+              else{
+                document.getElementById('setText').innerHTML = `
+                <li class="">
+                  <span class="coundown-count">PRESALE LIVE</span>
+                    <span class="coundown-count">
+                      <progress id = "progressbar" max="100" value="50"></progress>
+                    </span>
+                  </span>
+                </li>`;
+              }
+          clearInterval(timeInterval);
+          return;
+        }
+
+        if (distance > 0) {
+          if (temp == false) {
+            document.getElementById('setTime').innerText = ((minutes < 10) ? '0' + minutes : minutes) + " : " + ((seconds < 10) ? '0' + seconds : seconds);
+          } else {
+            document.getElementById('setDay').innerText = formatTime(days);
+            document.getElementById('setHour').innerText = formatTime(hours);
+            document.getElementById('setMinute').innerText = formatTime(minutes);
+            document.getElementById('setSecond').innerText = formatTime(seconds);
+          }
+        }
+
+        if (distance <= 0) {
+          document.getElementById("addAmout").innerText = "Buy SNORA | SNORA $0.03 "
+          distance = 1;
+          document.getElementById('setText').innerHTML = `
+            <li>
+              <span class="coundown-count">PRESALE LIVE</span>
+              <span class="coundown-label">Whitelist sale ends in <span class="coundown-label" id="setTime"></span></span>
+              </li>
+              `;
+          temp = false;
+          countdown();
+          clearInterval(timeInterval);
+        }
       }
-    })
+
+      function countdown() {
+        //secondTimer
+        countDownDate = new Date(
+          setDate.getUTCFullYear(),
+          setDate.getUTCMonth(),
+          setDate.getUTCDate(),
+          setDate.getUTCHours(),
+          setDate.getUTCMinutes(),
+          setDate.getUTCSeconds() + 5
+        ).getTime();
+
+        temp = false;
+        timerLogic();
+        stratInterval();
+      }
+    });
+
   </script>
+
 </body>
 
 </html>
