@@ -868,6 +868,40 @@ footer                        { position: relative; }
 
 /* Annoucement Section */
 
+/* value: */
+progress {
+  /* width: 200%; */
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 4cm;
+  height: 20px;
+}
+.progressbar-text{
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 5px; */
+}
+
+progress::-webkit-progress-bar {
+  background-color: #fff;
+}
+
+progress::-webkit-progress-bar,
+progress::-webkit-progress-value {
+  border-radius: 20px;
+}
+
+progress::-moz-progress-bar {
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(to right, #49b9ff 0%, #3f5dff 100%);
+}
+
+
 /* media query start */
 
 @media (min-width: 1501px) and (max-width: 1664px) {
@@ -1542,14 +1576,8 @@ footer                        { position: relative; }
   .snora-tabs .form-grp span img  { max-width:20px }
   .buy-nora-left-sec          { padding-right:0px; }
   .buy-nora-sec:after             { position:absolute; }
-
+  
   /*Buy Nora Page*/
 }
 
 
-.progressbar-text{
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-10px);
-}
