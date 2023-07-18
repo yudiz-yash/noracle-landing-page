@@ -265,8 +265,18 @@
             </div>
             <div class="buy-nora-item">
               <h3>SNORA Contract Address</h3>
-              <p>Noracle Uses the Polygon Network</p>
-              <p>Contract: the contract address will be published here just before the presale start</p>
+              <p> <span>Noracle Uses the Polygon Network</span> </br>
+              Contract:0x32CAFc164d9c4114B2694469494AE8f856494E99
+              </p>
+              <p>Don’t directly transfer any fund to this address.</br>
+               Don’t have Polygon network on your MetaMask yet?
+              </p>
+              <p><span> Then do the following:</span></br>
+                1. On Metamask, select the Network tab/dropdown</br>
+                2. Click on Add Network</br>
+                3. Find Polygon Mainnet on the list of available networks</br>
+                4. Approve the network addition</br>
+              </p>
             </div>
           </div>
         </div>
@@ -486,8 +496,8 @@
       var interval;
       var timeInterval;
       //timer progressbar
-      var startTime = { hh: 10, mm: 32, ss: 0, ms: 0 }
-      var EndTime = { hh: 10, mm: 33, ss: 0, ms: 0 }
+      var startTime = { hh: 11, mm: 16, ss: 0, ms: 0 }
+      var EndTime = { hh: 11, mm: 17, ss: 0, ms: 0 }
 
       function stratInterval() {
         timeInterval = setInterval(function () {
@@ -513,7 +523,7 @@
                       </span>
                       </li>`;
               }
-              else{
+              else {
                 document.getElementById('setText').innerHTML = `
                 <li class="">
                   <span class="coundown-count">PRESALE LIVE</span>
@@ -581,7 +591,7 @@
         if (temp == false && distance <= 0) {
           distance = 1;
           if (!timeProgressOver) {
-                document.getElementById('setText').innerHTML = `
+            document.getElementById('setText').innerHTML = `
                 <li class="">
                   <span class="coundown-count">PRESALE LIVE</span>
                   <span class="coundown-count">
@@ -593,9 +603,9 @@
                       </span>
                       </span>
                       </li>`;
-              }
-              else{
-                document.getElementById('setText').innerHTML = `
+          }
+          else {
+            document.getElementById('setText').innerHTML = `
                 <li class="">
                   <span class="coundown-count">PRESALE LIVE</span>
                     <span class="coundown-count">
@@ -603,7 +613,7 @@
                     </span>
                   </span>
                 </li>`;
-              }
+          }
           clearInterval(timeInterval);
           return;
         }

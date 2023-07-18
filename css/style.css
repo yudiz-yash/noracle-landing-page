@@ -795,6 +795,8 @@ body.japanese .main-tenth .content .main-title::before { content: "詳細につ�
 .buy-nora-item p a:hover,
 .buy-nora-item p a:focus { background:linear-gradient(to right, #49b9ff 0%, #3f5dff 100%); -webkit-background-clip: text;  }
 .buy-nora-right-sec       { position:sticky;top: 100px; border-radius:25px; border:2px solid #3f5dff  }
+.buy-nora-item p span     { background:linear-gradient(to right, #49b9ff 0%, #3f5dff 100%); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  display: inline-block; font-family: "Inter-600"; }
 /*#mainfifth                { display:none; }*/
 #mainfifth                { padding:0; height:0 }
 .buy-nora-right-bottom-sec { background:#000; color:#fff; padding:20px; border-radius: 0 0 23px 23px;  }
