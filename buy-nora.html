@@ -411,24 +411,6 @@
       window.location.href = "index.html"
 
     });
-    // $(".scroller a[href^='#']").click(function (e) {
-    //   e.preventDefault();
-
-    //   if (window.innerWidth < 1200) {
-    //     var position = $($(this).attr("href")).offset().top - 620;
-    //     // var position = $($(this).attr("href")).offset().top - 590;
-    //   }
-    //   else {
-    //     var position = $($(this).attr("href")).offset().top - 15;
-    //     // var position = $($(this).attr("href")).offset().top + 1;
-    //   }
-    //   // $("body, html").animate({
-    //   //   scrollTop: position
-    //   // } /* speed */ );
-    //   gsap.to(window, { duration: 0.05, scrollTo: position });
-
-
-    // });
 
     $(".video a[href^='#']").click(function (e) {
       e.preventDefault();
@@ -486,18 +468,15 @@
         setDate.getUTCSeconds() + 3
       ).getTime();
 
-      // var countDownDate = new Date("Jul 13, 2023 13:08:00").getTime();
+      // var countDownDate = new Date("Jul 20, 2023 5:43:00").getTime();
       var distance;
       var temp = true;
       var timeProgressOver = false;
       timerLogic();
       stratInterval();
       // Update the count down every 1 second
-      var interval;
       var timeInterval;
       //timer progressbar
-      var startTime = { hh: 11, mm: 16, ss: 0, ms: 0 }
-      var EndTime = { hh: 11, mm: 17, ss: 0, ms: 0 }
 
       function stratInterval() {
         timeInterval = setInterval(function () {
@@ -514,10 +493,10 @@
                 <li class="">
                   <span class="coundown-count">PRESALE LIVE</span>
                   <span class="coundown-count">
-                    <progress id = "progressbar" max="100" value="${getTimePercentage(startTime, EndTime)}"></progress>
+                    <progress id = "progressbar" max="100" value="${getTimePercentage()}"></progress>
                     <div class="progressbar-text">
-                      <span>${startTime.hh}:${startTime.mm}</span>
-                      <span>${EndTime.hh}:${EndTime.mm}</span>
+                      <span>4PM</span>
+                      <span>6PM</span>
                       </div>
                       </span>
                       </span>
@@ -544,13 +523,13 @@
         }, 1000);
       }
 
-      function getTimePercentage(startTime, EndTime) {
+      function getTimePercentage() {
         const now = new Date();
         const start = new Date(now);
-        start.setHours(startTime.hh, startTime.mm, startTime.ss, startTime.ms); // Set the start time to 4 PM (16:00:00)
+        start.setHours(11,0,0,0); // Set the start time to 4 PM (16:00:00)
 
         const end = new Date(now);
-        end.setHours(EndTime.hh, EndTime.mm, EndTime.ss, EndTime.ms); // Set the end time to 6 PM (18:00:00)
+        end.setHours(12,0,0,0); // Set the end time to 6 PM (18:00:00)
 
         const totalTime = end - start;
         const elapsedTime = now - start;
@@ -595,10 +574,10 @@
                 <li class="">
                   <span class="coundown-count">PRESALE LIVE</span>
                   <span class="coundown-count">
-                    <progress id = "progressbar" max="100" value="${getTimePercentage(startTime, EndTime)}"></progress>
+                    <progress id = "progressbar" max="100" value="${getTimePercentage()}"></progress>
                     <div class="progressbar-text">
-                      <span>${startTime.hh}:${startTime.mm}</span>
-                      <span>${EndTime.hh}:${EndTime.mm}</span>
+                      <span>4PM</span>
+                      <span>6PM</span>
                       </div>
                       </span>
                       </span>
@@ -652,9 +631,9 @@
           setDate.getUTCDate(),
           setDate.getUTCHours(),
           setDate.getUTCMinutes(),
-          setDate.getUTCSeconds() + 6
+          setDate.getUTCSeconds() + 10
         ).getTime();
-
+        // var countDownDate = new Date("Jul 20, 2023 5:43:00").getTime();
         temp = false;
         timerLogic();
         stratInterval();
